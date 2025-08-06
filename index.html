@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Các thẻ meta cơ bản -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tiêu đề của trang web -->
+    <title>NghiaLe | Personal Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!--
+        =====================================================
+        ====================== CSS ==========================
+        =====================================================
+    -->
+    <style>
+                /* --- Cài đặt Tổng thể (Global Styles) --- */
+        :root {
+            --background-dark: #000000;
+            --text-dark: #f5f2f2;
+            --border-dark: #555;
+            --background-light: #FAF8F3;
+            --text-light: #000000;
+            --border-light: #dddddd;
+            --font-size-sidebar: 12px;
+            --text-content-font-size: 18px;
+            /* --text-content-font-weight: 400; */
+        }
+        body {
+            background-color: var(--background-dark);
+            color: var(--text-dark);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        body.light-theme {
+            background-color: var(--background-light);
+            color: var(--text-light);
+        }
+        body.light-theme a { color: var(--text-light); }
+        body.light-theme .sidebar-nav,
+        body.light-theme .mobile-header { border-color: var(--border-light); }
+        body.light-theme .mobile-header {
+            background-color: var(--background-light);
+        }
+        body.light-theme .course-block,
+        body.light-theme .portfolio-block { border-top-color: var(--border-light); }
+        body.light-theme .portfolio-main h2 {color: #FF4300}
+
+        body.light-theme .sidebar-nav.is-open ul {list-style: none; color: #FAF8F3;}
+        body .sidebar-nav.is-open ul li a {list-style: none; color: #FAF8F3; text-decoration: none; font-weight: 800; text-align: center;}
+        body.light-theme .sidebar-nav.is-open ul li a {list-style: none; color: #FAF8F3; text-decoration: none; font-weight: 800; text-align: center;}
+        body .sidebar-nav.is-open .sidebar-footer {color: #FAF8F3; padding-top: 20px}
+        body.light-theme .sidebar-nav.is-open .sidebar-footer {color: #FAF8F3; padding-top: 20px}
+        body .sidebar-nav.is-open .sidebar-footer p,
+        body.light-theme .sidebar-nav.is-open .sidebar-footer p { color: inherit; padding: 0; margin: 0;font-size: 0.8em;}
+        body .sidebar-nav.is-open .sidebar-footer a,
+        body.light-theme .sidebar-nav.is-open .sidebar-footer a { color: inherit; padding: 0; margin: 0;font-size: 0.8em;}
+
+        /* --- Kiểu dáng chung --- */
+        .responsive-text { font-size: 100px; }
+        .logo-svg { height: 100px; width: auto; vertical-align: middle; }
+        .logo-text { fill: currentColor; font-size: 24px; font-weight: bold; font-family: 'Helvetica Neue', Arial, sans-serif; }
+        .logo-box-bg { fill: currentColor; }
+        .logo-m, .logo-line { fill: var(--background-dark); stroke: var(--background-dark); }
+        body.light-theme .logo-m, body.light-theme .logo-line { fill: var(--background-light); stroke: var(--background-light); }
+        .logo-m { font-size: 22px; font-weight: bold; }
+        .logo-line { stroke-width: 2; }
+        .page-content h1 { font-size: 3em; text-transform: uppercase; margin-top: 0; }
+        .page-content h2 { font-size: 1.8em; margin-top: 40px; padding-bottom: 10px; }
+        .page-content h4 { font-weight: bold; margin-bottom: 5px; text-transform: uppercase; color: #888; margin-top: 20px; }
+        .page-content p { font-size: 1.1em; line-height: 1.6; }
+        .video-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+        /*
+        ======================================================================
+        QUY TẮC MẶC ĐỊNH (ÁP DỤNG CHO CẢ DESKTOP VÀ MOBILE NẾU KHÔNG BỊ GHI ĐÈ)
+        PHẢI ĐẶT CÁC QUY TẮC NÀY TRƯỚC CÁC KHỐI @MEDIA
+        ======================================================================
+        */
+        .row-1-header {
+            padding-bottom: 16px;
+            padding-top: 8px;
+            margin-bottom: 0px;
+            margin-top: 12px;
+            /* border-bottom: 3px solid #eee; */
+        }
+        .row-2-header-content {
+            display: grid;
+            grid-template-columns: 60% 40%; /* Mặc định 2 cột */
+            /* gap: 20px; */
+            border-bottom: 3px solid #eee;
+            padding-bottom: 16px;
+            hyphens: auto;
+        }
+        .text-content {
+            font-family: PT Serif;
+            font-size: var(--text-content-font-size);
+            line-height: 1.1;
+            font-weight: var(--text-content-font-weight);
+            hyphens: auto;
+        }
+        .text-content p span {
+            font-weight: bold;
+            color: #FF4300;
+            /* text-decoration: underline; */
+
+        }
+        #overlay {
+            display: none; position: fixed; top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 999;
+        }
+        #overlay.active { display: block; }
+        
+        div h4+p {
+            font-size: 1em;
+        }
+
+        /* --- pop-up hình ảnh khi rà đến chữ 
+        /* --.hover-popup {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            color: #FF4300;
+            text-decoration: underline;
+        }
+        .popup-image {
+            display: none;
+            position: absolute;
+            bottom: 100%;      
+            left: 100%;     
+            margin-top: 0;  
+            margin-left: 4px;
+            width: 400px;
+            border: 1px solid #ccc;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            z-index: 999;
+        }
+        .hover-popup:hover .popup-image {
+            display: block;
+        } 
+        /* THÊM KHỐI NÀY VÀO */
+        .popup-trigger {
+            color: #FF4300;
+            text-decoration: underline;
+            cursor: pointer; /* Thêm con trỏ chuột giống các ảnh khác */
+        }
+
+        /* --- thêm vào cho contacts --- */
+            .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            }
+            .contact-form .form-row {
+            display: flex;
+            gap: 10px;
+            }
+            .contact-form input,
+            .contact-form textarea {
+            padding: 10px;
+            font-size: 1em;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            background-color: #FAF8F3;
+            }
+            .contact-form input::placeholder,
+            .contact-form textarea::placeholder {
+            color: #888;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            }
+            .submit-btn {
+            background-color: #fd7c4c;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            }
+            .submit-btn:hover {
+            background-color: #FF4300;
+            }
+        
+        /* =====================================================
+            CSS CHO LƯỚI PORTFOLIO MỚI
+            ===================================================== */
+            /* --- Đây là phần được thay đổi chính --- */
+            /* Container chính, dùng grid để tạo 2 cột */
+            .portfolio-column-layout {
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Mặc định 1 cột cho mobile */
+                gap: 1.1rem; /* Khoảng cách giữa 2 cột khi hiển thị */
+                padding-top: 0px;
+                margin-bottom: 60px;
+            }
+            /* Style cho mỗi cột */
+            .portfolio-column {
+                display: flex;
+                flex-direction: column;
+                gap: 1.1rem; /* Khoảng cách giữa các ảnh TRONG CÙNG một cột */
+            }
+
+            /* Style cho từng ảnh */
+            /* --- Đây là phần được thay đổi chính --- */
+            .portfolio-grid-container {
+                display: grid;
+                /* CHÌA KHÓA: 
+                - grid-template-columns: 1fr 1fr; -> Luôn tạo ra 2 cột có chiều rộng bằng nhau.
+                - gap: Khoảng cách cho cả hàng và cột.
+                */
+                grid-template-columns: 1fr; /* Mặc định 1 cột cho mobile */
+                gap: 1.5rem; /* Khoảng cách giữa các ảnh */
+                padding-top: 40px;
+                margin-bottom: 60px;
+            }
+
+            /* Style cho từng ảnh */
+            .portfolio-grid-item {
+                overflow: hidden;
+                border-radius: 4px;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+                position: relative;
+            }
+
+            /* Đảm bảo ảnh hiển thị đầy đủ, không bị méo */
+            .portfolio-grid-item img, .portfolio-grid-item video {
+                width: 100%;      /* Chiều rộng bằng 100% cột chứa nó */
+                height: auto;     /* Chiều cao tự động điều chỉnh để giữ đúng tỷ lệ */
+                display: block;   /* Loại bỏ khoảng trống thừa dưới ảnh */
+                transition: opacity 0.4s ease; /* Hiệu ứng mờ khi hover */
+            }
+
+            .portfolio-grid-item:hover img, .portfolio-grid-item:hover video {
+                opacity: 0.85; /* Làm ảnh hơi mờ đi để caption nổi bật */
+            }
+
+            /* --- Phần caption hiển thị khi hover (Tùy chọn) --- */
+            .portfolio-grid-item .caption {
+                position: absolute;
+                top: 0; /* Thay đổi: neo vào đỉnh */
+                left: 0;
+                width: 100%;
+                /* Thay đổi: đảo chiều gradient */
+                background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent); 
+                color: white;
+                /* Thay đổi: đảo chiều padding để chữ không bị sát đỉnh */
+                padding: 1rem 1rem 2rem 1rem; 
+                box-sizing: border-box;
+                /* Thay đổi: đẩy lên trên để ẩn đi */
+                transform: translateY(-100%); 
+                transition: transform 0.4s ease;
+                font-size: 0.9em;
+                font-weight: bold;
+            }
+
+            .portfolio-grid-item:hover .caption {
+                transform: translateY(0);
+            }
+            /* Thêm class này để giới hạn chiều rộng của lưới portfolio */
+            .portfolio-content-wrapper {
+                width: 100%; /* Mặc định cho mobile */
+            }
+
+        /* CSS cho lớp phủ (overlay) tạo hiệu ứng phóng to hình cho từng ảnh và video trong Porfolio và Personal Interests */
+            /* #image-overlay {
+                display: none; /* Ẩn lớp phủ ban đầu
+                position: fixed; /* Cố định trên toàn màn hình
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9); /* Nền đen mờ
+                z-index: 1000; /* Đảm bảo lớp phủ nằm trên cùng
+                justify-content: center; /* Căn giữa nội dung theo chiều ngang
+                align-items: center; /* Căn giữa nội dung theo chiều dọc
+                cursor: pointer; /* Biểu tượng con trỏ cho biết có thể nhấp để đóng
+            }
+
+            /* CSS cho ảnh/video bên trong lớp phủ
+            #image-overlay img,
+            #image-overlay video {
+                display: block; /* Loại bỏ khoảng trắng thừa dưới ảnh/video
+                max-width: 90%; /* Giới hạn chiều rộng tối đa
+                max-height: 90%; /* Giới hạn chiều cao tối đa
+                object-fit: contain; /* Đảm bảo ảnh/video hiển thị vừa vặn mà không bị méo
+            }
+
+            /* === CSS MỚI CHO HIỆU ỨNG MƯỢT MÀ === */
+            #image-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9); /* Nền đen mờ 90% */
+                z-index: 1000;
+                display: flex; /* Luôn là flex để căn giữa */
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+
+                /* --- Thay đổi quan trọng --- */
+                opacity: 0; /* Ban đầu ẩn bằng cách làm trong suốt */
+                visibility: hidden; /* Ẩn hoàn toàn, không thể tương tác */
+                transition: opacity 0.4s ease, visibility 0.4s ease; /* Hiệu ứng chuyển động */
+            }
+
+            /* Lớp active để kích hoạt hiển thị */
+            #image-overlay.is-visible {
+                opacity: 1; /* Hiển thị lại */
+                visibility: visible; /* Cho phép tương tác */
+            }
+
+            /* Hiệu ứng cho ảnh/video bên trong */
+            #image-overlay img,
+            #image-overlay video {
+                display: block;
+                max-width: 90%;
+                max-height: 90%;
+                object-fit: contain;
+                border-radius: 4px; /* Bo góc nhẹ cho đẹp */
+
+                /* --- Hiệu ứng phóng to --- */
+                transform: scale(0.9); /* Ban đầu hơi thu nhỏ */
+                transition: transform 0.4s ease; /* Hiệu ứng chuyển động */
+            }
+
+            /* Khi lớp phủ active, phóng to ảnh/video về kích thước thật */
+            #image-overlay.is-visible img,
+            #image-overlay.is-visible video {
+                transform: scale(1); /* Phóng to về 100% */
+            }
+            /* === CSS MỚI CHO NÚT ĐÓNG (X) === */
+            #image-overlay .close-button {
+                position: absolute;
+                top: 20px;
+                right: 30px;
+                font-size: 40px;
+                font-weight: bold;
+                color: white;
+                cursor: pointer;
+                transition: transform 0.2s ease;
+            }
+
+            #image-overlay .close-button:hover {
+                transform: scale(1.2); /* Phóng to nhẹ khi rê chuột */
+            }
+
+            body .main-content .content-section .portfolio-block .portfolio-column-layout .portfolio-column .portfolio-grid-item img.expandable-image,
+            body .main-content .content-section .portfolio-block .portfolio-column-layout .portfolio-column .portfolio-grid-item video.expandable-image,
+            body .main-content .content-section .portfolio-port-image img.expandable-image {
+            cursor: pointer; /* Biểu tượng bàn tay nắm (pan) */
+            }
+
+            body .main-content .content-section .portfolio-block .portfolio-column-layout .portfolio-column .portfolio-grid-item img.expandable-image:active,
+            body .main-content .content-section .portfolio-block .portfolio-column-layout .portfolio-column .portfolio-grid-item video.expandable-image:active,
+            body .main-content .content-section .portfolio-port-image img.expandable-image:active {
+            cursor: grabbing; /* Biểu tượng bàn tay đang kéo (pan) khi click và giữ */
+            }
+
+
+            
+        /*
+        =====================================================
+        LAYOUT CHO MÀN HÌNH LỚN (DESKTOP)
+        =====================================================
+        */
+        @media (min-width: 860px) {
+            body > div:first-of-type {
+                padding-left: 15px;
+            }
+            
+            /* --- THÊM CÁC QUY TẮC NÀY VÀO --- */
+            /* Khi ở trang landing, ẩn sidebar đi */
+            body.landing-active .sidebar {
+                display: none;
+            }
+            /* Đồng thời, cho nội dung chính chiếm toàn bộ chiều rộng */
+            body.landing-active .page-container {
+                grid-template-columns: 1fr;
+                padding-left: 0; /* Xóa luôn padding bên trái để nội dung được canh giữa hoàn toàn */
+            }
+            /* --- KẾT THÚC PHẦN THÊM VÀO --- */
+
+            .page-container {
+                display: grid;
+                grid-template-columns: 120px 1fr;
+                height: 100vh;
+                /* width: 100%; */
+            }
+            aside.sidebar { /* Sửa trực tiếp thẻ aside có class .sidebar */
+                height: 100%;
+                /* border-right: 1px solid var(--border-dark); */
+            }
+            .sidebar-nav {
+                display: flex; 
+                flex-direction: column; 
+                justify-content: space-between;
+                box-sizing: border-box;
+                height: 100%;
+                padding: 10px 10px 20px 5px;
+            }
+            .mobile-header { display: none; }
+            .main-content { 
+                padding: 0px 10px; 
+                height: 100vh; 
+                overflow-y: auto;
+            }
+            .page-content h1 { font-size: 3em; }
+            .course-block {
+                display: grid; 
+                grid-template-columns: 40% 5% 40% 15%;
+                align-items: start; 
+                /* border-top: 1px solid var(--border-dark); */
+                padding-top: 10px; 
+                margin-top: 10px;
+                border-bottom: 3px solid #eee;
+            }
+            .portfolio-block {
+                display: grid; 
+                grid-template-columns: 40% 5% 20% 35%;
+                align-items: start; 
+                /* border-top: 1px solid var(--border-dark); */
+                padding-top: 10px; 
+                margin-top: 10px;
+                border-bottom: 3px solid #eee;
+            }
+            .portfolio-port-image {
+                padding-left:40px; 
+                font-weight: bold; 
+                border-bottom: 3px solid #000000;
+            }
+            .portfolio-main {padding-left: 10%;}
+            .course-main h2, .portfolio-main h2 { margin-top: 0; border-bottom: none; padding-bottom: 0; font-size: 2em; font-family: "Source Sans Pro", sans-serif; line-height: 0.9;}
+            .course-details h4, .portfolio-details h4 { margin-top: 0; margin-bottom: 0; }
+            .course-details p, .portfolio-details p {
+                margin-bottom: 20px;
+                margin-top: 0;
+            }
+            .sidebar-nav ul { list-style: none; padding: 0; margin: 0; font-size: var(--font-size-sidebar); font-weight: bold}
+            .sidebar-nav ul li { margin-bottom: 10px; line-height: 1;}
+            .sidebar-nav ul li a { color: inherit; text-decoration: underline; font-weight: 800; }
+            .sidebar-nav ul li a.active { text-decoration: underline; }
+            .sidebar-footer { color: inherit; font-size: 10px; font-weight: bold;text-decoration: underline; }
+            .sidebar-footer a, .sidebar-footer p { color: inherit; }
+            
+            /* Chỉ áp dụng 65% cho màn hình lớn (desktop) */
+                .portfolio-content-wrapper {
+                    width: 65%;
+                }
+                .portfolio-grid-container {
+                        grid-template-columns: 1fr 1fr; /* Chia thành 2 cột bằng nhau */
+                    }
+
+            /* Thiết lập layout 2 cột cho màn hình lớn */
+            .portfolio-column-layout {
+                grid-template-columns: 1fr 1fr; /* Chia thành 2 cột bằng nhau */
+            }
+
+        }
+        
+        /*
+        =====================================================
+        LAYOUT CHO MÀN HÌNH NHỎ (MOBILE) - GHI ĐÈ LÊN TRÊN
+        =====================================================
+        */
+        @media (max-width: 860px) {
+            .mobile-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0;
+                padding-bottom: 20px;
+                padding-top:20px;
+                border-bottom: 1px solid var(--border-dark);
+
+                /* --- Thuộc tính mới thêm vào để slidebar luôn trên cùng --- */
+                position: sticky;
+                top: 0;
+                /* Thêm màu nền để che nội dung khi cuộn */
+                background-color: var(--background-dark);
+                /* Đảm bảo header luôn nằm trên */
+                z-index: 100;
+            }
+            .main-content { padding: 20px;
+            padding-top: 0px; }
+            .responsive-text { font-size: 70px; }
+            
+            /* --- Ghi đè layout của row-2-header-content về 1 cột --- */
+            .row-2-header-content {
+                grid-template-columns: 1fr;
+            }
+            
+            /* --- Logic menu trượt --- */
+            .sidebar-nav {
+                display: flex;
+                flex-direction: column;
+                position: fixed; top: 0; left: 0;
+                width: 100%; height: 100%;
+                background-color: inherit;
+                z-index: 10000;
+                justify-content: center; align-items: center; text-align: center;
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+                transform: translateY(-100%);
+                transition: transform 0.4s ease, opacity 0.4s ease, visibility 0.4s;
+            }    
+            .sidebar-nav.is-open {
+                opacity: 1; visibility: visible;
+                pointer-events: auto; transform: translateY(0);
+            } 
+            .sidebar-nav.is-open ul {padding-left: 0;}
+
+            .mobile-header .menu-button {
+                position: relative; z-index: 10001;
+                background: none; border: none; cursor: pointer;
+                font-size: 1em; font-weight: bold; color: inherit;
+            }  
+
+            .course-block, .portfolio-block {
+                display: grid; 
+                align-items: start; 
+                /* border-top: 1px solid var(--border-dark); */
+                padding-top: 10px; 
+                margin-top: 10px;
+                border-bottom: 3px solid #eee;               
+            }
+
+            .course-block .course-details, .portfolio-block .portfolio-details {
+                text-align: right;
+            }
+
+            .course-block div, .portfolio-block div {padding-top: 0;
+                margin-top: 0;}
+            .course-details, .portfolio-details {
+                padding-bottom: 40px;
+                padding-top: 0;
+                margin-top: 0;}
+            .course-details h4, .portfolio-details h4 {
+                margin-bottom: 4px;
+                margin-top: 4px;
+            }
+            .course-details p, .portfolio-details p {
+                margin-bottom: 2px;
+                margin-top: 2px;
+            }
+            /* --- thêm vào cho contacts --- */
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-main {padding: 0% 10%}
+
+            .portfolio-port-image {
+                font-weight: bold; 
+                border-bottom: 3px solid #000000;}
+            .portfolio-port-image img {
+                width: 100%
+            }
+
+            .contact-form .form-row {
+                flex-direction: column;
+            }
+            .contact-form {
+                padding-left: 20%;
+                padding-right: 20%;
+
+            /* --- pop-up hình ảnh khi rà đến chữ --- */
+
+            /* --- thêm vào cho contacts --- */
+            }
+
+            /*
+            =========================================================
+            === THÊM KHỐI CODE NÀY ĐỂ ĐỔI LOGO HEADER THÀNH VUÔNG ===
+            =========================================================
+            */
+            .mobile-header .logo-svg {
+                width: 80px;        /* Đặt chiều rộng cố định, nhỏ lại cho hợp với mobile */
+                height: 80px;       /* Đặt chiều cao bằng chiều rộng để tạo hình vuông */
+                border-radius: 5px; /* Đổi thành hình vuông bo góc (hoặc 0 cho vuông sắc cạnh) */
+                object-fit: cover;  /* Đảm bảo ảnh không bị méo khi đổi kích thước */
+            }
+
+        }
+        
+        @media (min-width: 1150px) {
+            .responsive-text { font-size: 100px; }
+        }
+
+        /* Ẩn thanh cuộn cho trình duyệt Webkit (Chrome, Safari, Edge) */
+        .main-content::-webkit-scrollbar {
+            display: none;
+        }
+        /* Ẩn thanh cuộn cho Firefox */
+        .main-content {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        
+
+        /*
+        =============================================================
+        === DÁN TOÀN BỘ KHỐI CSS MỚI CHO LANDING PAGE VÀO ĐÂY ===
+        =============================================================
+        */
+        
+        /* ============================================= */
+        /* === CSS CHO LANDING PAGE MỚI === */
+        /* ============================================= */
+        
+        /* Chỉ áp dụng các style này khi ở trang landing */
+        body.landing-active {
+            color: #fff;
+            background-color: #000;
+            overflow: hidden; /* <-- THÊM DÒNG NÀY VÀO */
+        }
+        
+        body.landing-active .page-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        /*
+        =====================================================
+        === ẨN HEADER Ở TRANG LANDING (TRÊN MOBILE) ===
+        =====================================================
+        */
+        body.landing-active .mobile-header {
+            display: none;
+        }
+        
+        .landing-container {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr; /* Chia 2 cột với tỷ lệ */
+            gap: 0rem;
+            width: 100%;
+            max-width: 1200px;
+        }
+        
+        /* --- Cột Trái --- */
+        .landing-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5%;
+        }
+        
+        .landing-portrait {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #fff;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .landing-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .landing-title {
+            font-size: 1rem;
+            margin: 0;
+            color: #ccc;
+        }
+        
+        .cv-button {
+            display: inline-block;
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            margin-top: 2rem;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+            text-align: center;
+            max-width: 180px;
+            font-size: 0.8rem;
+        }
+        .cv-button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        
+        .landing-divider {
+            border: none;
+            height: 2px;               /* Làm cho đường kẻ dày hơn một chút */
+            width: 160px;               /* Thiết lập độ rộng cố định */
+            background-color: #ccc; /* Đổi màu thành xanh dương nổi bật */
+            margin: 2rem 0;            /* Giữ nguyên khoảng cách trên dưới */
+        }
+        
+        .landing-subtitle {
+            font-size: 1rem;
+            color: #ccc;
+            margin-bottom: 1rem;
+        }
+        
+        .landing-icons {
+            display: flex;
+            gap: 1rem;
+        }
+        .landing-icons span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #555;
+            border-radius: 50%;
+        }
+        .landing-icons svg {
+            width: 20px;
+            height: 20px;
+            color: #fff;
+        }
+        
+        
+        /* --- Cột Phải --- */
+        .landing-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 10%;
+            margin-top: 5%;
+        }
+        
+        .landing-hello {
+            font-size: 6rem;
+            font-weight: 900;
+            margin: 0;
+            line-height: 1;
+        }
+        
+        .landing-sub-hello {
+            font-size: 1.2rem;
+            margin: 0 0 2rem 0;
+            color: #ccc;
+        }
+        
+        .landing-nav-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .landing-nav-pills a {
+            text-decoration: none;
+            color: #fff;
+            border-radius: 20px;
+            background-color: transparent; /* Nền trong suốt */
+            border: 1px solid #FF4300; /* Viền trắng */
+            padding: 10px 20px;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .landing-nav-pills a:hover {
+            background-color: #fff; /* Nền trắng */
+            color: #000; /* Chữ đen */
+            border: 1px solid #000; /* Viền trắng */
+        }
+        .landing-nav-pills a.active {
+            background-color: #FF4300;
+            border-color: #FF4300;
+            color: #fff;
+        }
+        
+        .landing-contact p {
+            margin: 0.5rem 0;
+            color: #ccc;
+            font-size: 0.8rem;
+        }
+        /*
+        =====================================================
+        === HIỆU ỨNG XUẤT HIỆN CHO LANDING PAGE ===
+        =====================================================
+        */
+
+        /* 1. Định nghĩa "công thức" cho hiệu ứng */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* Bắt đầu từ vị trí thấp hơn 20px */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0); /* Trở về vị trí ban đầu */
+            }
+        }
+
+        /* 2. Chuẩn bị: Ẩn cả 2 cột trước khi animation bắt đầu */
+        body.landing-active .landing-left,
+        body.landing-active .landing-right {
+            opacity: 0; /* Mặc định là trong suốt */
+        }
+
+        /* 3. Áp dụng animation cho từng cột với độ trễ khác nhau */
+        body.landing-active .landing-left {
+            /* Áp dụng animation fadeInUp, kéo dài 0.8s, hiệu ứng ease-out, và giữ lại trạng thái cuối cùng */
+            animation: fadeInUp 1.5s ease-out 0.4s forwards;
+        }
+
+        body.landing-active .landing-right {
+            /* Áp dụng animation tương tự nhưng có độ trễ lớn hơn */
+            animation: fadeInUp 1.5s ease-out 1s forwards;
+        }
+        /*
+        =====================================================
+        === THÊM CÔNG THỨC ANIMATION MỚI CHO MOBILE ===
+        =====================================================
+        */
+        @keyframes fadeInUpAndScale {
+            from {
+                opacity: 0;
+                /* Bắt đầu mờ, ở dưới và đã được thu nhỏ */
+                transform: translateY(20px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                /* Kết thúc rõ nét, đúng vị trí và vẫn giữ nguyên kích thước thu nhỏ */
+                transform: translateY(0) scale(0.8);
+            }
+        }
+        
+        /* --- Responsive cho điện thoại --- */
+        @media (max-width: 860px) {
+            body.landing-active {
+                color: #fff;
+                background-color: #000;
+                margin: 5%;
+                overflow: visible; /* <-- hiện ra thanh trượt trên điện thoại cho trang landing */
+                margin-top: 0%;
+            }
+            body.landing-active .page-content {
+                height: auto;
+                padding: 2rem 1rem;
+            }
+            .landing-active {margin-top: 0%;}
+            .landing-container {
+                grid-template-columns: 1fr; /* Chuyển thành 1 cột */
+                text-align: center;
+
+            }
+            .landing-left, .landing-right {
+                align-items: center;
+            }
+            .landing-hello {
+                font-size: 4rem;
+            }
+            .landing-nav-pills {
+                justify-content: center;
+            }
+            .landing-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 0%;
+            margin-top: 0%;
+            padding-right: 20px;
+            }
+            .landing-left {
+            padding-right: 20px;
+            margin-top: 0%;
+            transform: scale(0.8); /* Thu nhỏ lại còn 80% */
+            }
+            body.landing-active .landing-left {
+                animation: fadeInUpAndScale 1.5s ease-out 0.4s forwards;
+            }
+            body.landing-active .landing-right {
+                animation: fadeInUpAndScale 1.5s ease-out 1s forwards;
+            }
+            .landing-divider {
+            border: none;
+            height: 2px;               /* Làm cho đường kẻ dày hơn một chút */
+            width: 160px;               /* Thiết lập độ rộng cố định */
+            background-color: #ccc; /* Đổi màu thành xanh dương nổi bật */
+            margin: 0%;            /* Giữ nguyên khoảng cách trên dưới */
+            margin-top: 2rem;
+            }
+        }
+
+            /*
+            =====================================================
+            === CSS CHO HIỆU ỨNG CHUYỂN TRANG (TRANSITION) ===
+            =====================================================
+            */
+
+            /* 1. Định nghĩa animation làm mờ và ẩn đi */
+            @keyframes fadeOutDown {
+                from {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                to {
+                    opacity: 0;
+                    transform: translateY(20px); /* Hơi trượt xuống khi biến mất */
+                }
+            }
+
+            /* 2. Áp dụng animation khi trang landing bắt đầu thoát ra */
+            /* Khi body có cả 2 class .landing-active và .is-exiting */
+            body.landing-active.is-exiting .landing-left,
+            body.landing-active.is-exiting .landing-right {
+                /* Chạy animation fadeOutDown trong 0.5s và giữ lại trạng thái cuối cùng */
+                animation: fadeOutDown 0.5s ease-in forwards;
+            }
+
+
+            /* 3. Chuẩn bị cho trang nội dung mới xuất hiện */
+            /* Ẩn sidebar và main-content đi trước khi animation bắt đầu */
+            body.page-is-entering .sidebar,
+            body.page-is-entering .main-content {
+                opacity: 0;
+            }
+
+            /* 4. Định nghĩa animation xuất hiện cho trang nội dung mới */
+            /* Chúng ta có thể tái sử dụng keyframe 'fadeInUp' đã có sẵn */
+
+            /* Sidebar xuất hiện trước */
+            body.page-is-entering .sidebar {
+                /* Chạy animation fadeInUp trong 0.6s, đợi 0.5s (sau khi landing page biến mất) rồi mới chạy */
+                animation: fadeInUp 0.6s ease-out 0.5s forwards;
+            }
+
+            /* Main content xuất hiện sau sidebar một chút */
+            body.page-is-entering .main-content {
+                /* Chạy animation fadeInUp trong 0.6s, đợi 0.8s (trễ hơn sidebar 0.3s) */
+                animation: fadeInUp 0.6s ease-out 0.8s forwards;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <div style="padding-top: 20px;">
+                    <div class="logo">
+                        <a href="#" data-page="">
+                            <img class="logo-svg" src="assets/image/portrait.jpg" alt="Logo">
+                        </a>
+                    </div>
+                    <ul>
+                        <li style="padding-top: 20px;"><a href="#" class="nav-link active"  data-page="practical-experiences">PRACTICAL EXPERIENCES</a></li>
+                        <li><a href="#" class="nav-link" data-page="research-and-teaching">REASEARCH & TEACHING</a></li>
+                        <li><a href="#" class="nav-link" data-page="portfolio">PORTFOLIO</a></li>
+                        <li><a href="#" class="nav-link" data-page="personal-interests">PERSONAL INTERESTS</a></li>
+                        <li><a href="#" class="nav-link" data-page="contacts">CONTACTS</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-footer">
+                    <p><a href="https://vgu.edu.vn/vi/home" target="_blank">VIETNAMESE-GERMAN UNIVERSITY</a></p>
+                    <p></p><a href="https://www.linkedin.com/in/le-tuan-nghia/" target="_blank">Linkedin</a></p>
+                    <a href="https://www.facebook.com/lit.nuoc/" target="_blank">Facebook</a>
+                </div>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="mobile-header">
+                <div class="logo">
+                    <a href="#" data-page="">
+                        <img class="logo-svg" src="assets/image/portrait.jpg" alt="Logo">
+                    </a>
+                </div>
+                <button class="menu-button">MENU</button>
+            </header>
+
+            <!-- Nội dung của các trang sẽ được tải vào đây -->
+            <div id="page-content"></div>
+        </main>
+    </div>
+
+    <!-- Lớp phủ màu đen mờ khi menu mở -->
+    <div id="overlay"></div>
+
+    <div id="image-overlay"></div>
+
+    <script src="templates.js"></script>
+
+    <script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const pageContentContainer = document.getElementById('page-content');
+        const navLinks = document.querySelectorAll('.nav-link, .logo a');
+        const body = document.body;
+        const menuButton = document.querySelector('.menu-button');
+        const sidebarNav = document.querySelector('.sidebar-nav');
+        const overlay = document.getElementById('overlay'); 
+
+        // --- TEMPLATES NỘI DUNG CÁC TRANG (Không thay đổi) --- đã được tách thành file templates.js
+
+        // =========================================================
+        // === PHẦN THAY ĐỔI BẮT ĐẦU TỪ ĐÂY ===
+        // =========================================================
+
+        /**
+         * HÀM MỚI: Tìm key trang đầy đủ từ một hash (có thể bị thiếu)
+         * @param {string} hash - Chuỗi hash từ URL (không bao gồm dấu #)
+         * @returns {string|null} - Trả về key đầy đủ nếu tìm thấy, ngược lại trả về null.
+         */
+        function findPageKeyByHash(hash) {
+            if (!hash) return null; // Nếu không có hash, trả về null
+
+            const pageKeys = Object.keys(pageTemplates).filter(k => k !== 'default' && k !== 'landing'); // Không tìm kiếm trang landing
+
+            // Trường hợp 1: Tìm sh trùng khớp chính xác
+            if (pageKeys.includes(hash)) {
+                return hash;
+            }
+
+            // Trường hợp 2: Tìm sh trùng khớp một phần (bắt đầu bằng hash)
+            const partialMatch = pageKeys.find(key => key.startsWith(hash));
+            if (partialMatch) {
+                return partialMatch;
+            }
+
+            // Nếu không tìm thấy, trả về null
+            return null;
+        }
+
+
+        // --- CÁC HÀM XỬ LÝ ---
+
+        function closeMobileMenu() {
+            sidebarNav.classList.remove('is-open');
+            menuButton.textContent = 'MENU';
+            overlay.classList.remove('active');
+        }
+        
+        function renderPage(pageName) {
+            let contentToRender = pageTemplates[pageName];
+            
+            // Nếu pageName không hợp lệ hoặc không có template, hiển thị trang 'default'
+            if (!contentToRender) {
+                contentToRender = pageTemplates['default'];
+                pageName = 'default'; // Đặt pageName thành default để xử lý logic bên dưới
+            }
+            
+            pageContentContainer.innerHTML = contentToRender;
+            
+            // --- BẮT SỰ KIỆN CHO NÚT BẤM TRÊN TRANG LANDING ---
+            if (pageName === 'landing') {
+                const landingNavLinks = document.querySelectorAll('.landing-nav-link');
+                landingNavLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        // Khi bấm nút, chuyển trang bằng cách thay đổi hash
+                        window.location.hash = link.dataset.page;
+                    });
+                });
+            }
+
+            // --- DÒNG MỚI THÊM VÀO ĐỂ XỬ LÝ SIDEBAR ---
+            body.classList.toggle('landing-active', pageName === 'landing');
+            // ---------------------------------------------
+
+            // Logic đổi theme vẫn giữ nguyên
+            const isLightTheme = pageName === 'portfolio' || pageName === 'contacts';
+            body.classList.toggle('light-theme', isLightTheme);
+            
+            // Cập nhật link active
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.page === pageName) {
+                    link.classList.add('active');
+                }
+            });
+            
+            const mainContent = document.querySelector('.main-content');
+            if (mainContent) {
+                mainContent.scrollTop = 0;
+            }
+        }
+
+        function handleNavigation(requestedPage) {
+            const pageToRender = requestedPage || 'landing';
+            const isCurrentlyLanding = body.classList.contains('landing-active');
+            const isNavigatingAwayFromLanding = isCurrentlyLanding && pageToRender !== 'landing';
+
+            // --- LOGIC CHUYỂN CẢNH MỚI ---
+            if (isNavigatingAwayFromLanding) {
+                // 1. Thêm class để kích hoạt animation "biến mất" của landing page
+                body.classList.add('is-exiting');
+
+                // 2. Đợi animation biến mất chạy xong (500ms, bằng với thời gian animation)
+                setTimeout(() => {
+                    // 3. Xóa các class của animation cũ
+                    body.classList.remove('is-exiting');
+                    
+                    // 4. Render nội dung trang mới
+                    renderPage(pageToRender); // Hàm này sẽ tự động xóa class 'landing-active'
+
+                    // 5. Thêm class để kích hoạt animation "xuất hiện" cho trang mới
+                    body.classList.add('page-is-entering');
+
+                    // 6. Dọn dẹp class 'page-is-entering' sau khi animation xuất hiện chạy xong
+                    // (Thời gian là 800ms delay + 600ms animation = 1400ms)
+                    setTimeout(() => {
+                        body.classList.remove('page-is-entering');
+                    }, 1400);
+
+                }, 500);
+            } else {
+                // Nếu không phải chuyển từ landing page, render trang như bình thường
+                renderPage(pageToRender);
+            }
+            // --- KẾT THÚC LOGIC CHUYỂN CẢNH ---
+
+            // Cập nhật URL (giữ nguyên logic cũ)
+            const currentHash = window.location.hash.substring(1);
+            if (pageToRender !== 'default' && pageToRender !== 'landing' && currentHash !== pageToRender) {
+                const newUrl = window.location.pathname + window.location.search + '#' + pageToRender;
+                history.replaceState(null, '', newUrl);
+            }
+
+            if (sidebarNav.classList.contains('is-open')) {
+                closeMobileMenu();
+            }
+        }
+
+        // --- GẮN CÁC SỰ KIỆN ---
+
+        // Xử lý khi nhấp vào link điều hướng
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const pageName = link.dataset.page;
+                if (window.location.hash.substring(1) !== pageName) {
+                    window.location.hash = pageName;
+                } else {
+                    // Nếu click vào link đang active, vẫn scroll lên đầu trang
+                    const mainContent = document.querySelector('.main-content');
+                    if (mainContent) mainContent.scrollTop = 0;
+                }
+            });
+        });
+
+        // Xử lý khi nhấp vào nút menu di động
+        if (menuButton) {
+            menuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = sidebarNav.classList.toggle('is-open');
+                menuButton.textContent = isOpen ? 'CLOSE' : 'MENU';
+                overlay.classList.toggle('active', isOpen);
+            });
+        }
+        
+        // Xử lý khi nhấp vào nền menu hoặc lớp phủ
+        if (sidebarNav) {
+            sidebarNav.addEventListener('click', function(e) {
+                if (!e.target.closest('a[data-page]')) {
+                    closeMobileMenu();
+                }
+            });
+        }
+        if (overlay) {
+            overlay.addEventListener('click', closeMobileMenu);
+        }
+
+        // Xử lý khi hash thay đổi (người dùng dùng nút back/forward)
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.substring(1);
+            // Nếu người dùng bấm back về trang trống (landing), thì hiển thị landing
+            if (!hash) {
+                handleNavigation('landing');
+                return;
+            }
+            const foundPageKey = findPageKeyByHash(hash);
+            
+            // Nếu tìm thấy key (dù là partial hay full), thì điều hướng đến trang đó
+            // Nếu không tìm thấy (foundPageKey là null), điều hướng đến trang 'default' (Not Found)
+            handleNavigation(foundPageKey || 'default');
+        });
+
+        // --- KHỞI TẠO TRANG LẦN ĐẦU ---
+
+        function initializePage() {
+            const initialHash = window.location.hash.substring(1);
+            
+            // Nếu không có hash trên URL, hiển thị trang mặc định
+            if (!initialHash) {
+                handleNavigation('landing');
+                return;
+            }
+            
+            // Nếu có hash, tìm key tương ứng
+            const foundPageKey = findPageKeyByHash(initialHash);
+            
+            // Nếu tìm thấy, hiển thị trang đó
+            // Nếu không (kể cả khi gõ sai), hiển thị trang "Not Found"
+            handleNavigation(foundPageKey || 'default');
+        }
+
+        // Chạy hàm khởi tạo
+        initializePage();
+
+        // === PHẦN THÊM VÀO ĐỂ SỬA LỖI PHÓNG TO ẢNH ===
+        // 1. Tạo lớp phủ cho ảnh (nó đã có trong CSS của bạn với id #image-overlay)
+        // 2. Lắng nghe sự kiện click trên toàn bộ vùng nội dung chính
+        // 1. Lắng nghe sự kiện click để MỞ ảnh/video
+        pageContentContainer.addEventListener('click', function(event) {
+            const target = event.target;
+            const imageOverlay = document.getElementById('image-overlay');
+
+            let imageSrc = null;
+            let isVideo = false;
+
+            if (target.classList.contains('expandable-image')) {
+                imageSrc = target.src;
+                isVideo = (target.tagName === 'VIDEO');
+            } else if (target.classList.contains('popup-trigger')) {
+                event.preventDefault();
+                imageSrc = target.dataset.imageSrc;
+                isVideo = false;
+            }
+
+            if (imageSrc) {
+                // Tạo ảnh hoặc video
+                const newElement = isVideo ? document.createElement('video') : document.createElement('img');
+                newElement.src = imageSrc;
+                if (isVideo) {
+                    newElement.autoplay = true;
+                    newElement.controls = true;
+                    newElement.loop = true;
+                }
+
+                // Tạo nút X
+                const closeButton = document.createElement('div');
+                closeButton.className = 'close-button';
+                closeButton.innerHTML = '&times;'; // Ký tự '×'
+
+                // Dọn dẹp và thêm nội dung mới vào lớp phủ
+                imageOverlay.innerHTML = '';
+                imageOverlay.appendChild(newElement);
+                imageOverlay.appendChild(closeButton); // Thêm nút X vào
+                imageOverlay.classList.add('is-visible');
+            }
+        });
+
+        // 4. Thêm sự kiện click để đóng lớp phủ ảnh
+        const imageOverlay = document.getElementById('image-overlay');
+        if (imageOverlay) {
+            imageOverlay.addEventListener('click', function(event) {
+                // Chỉ đóng khi click vào nút X hoặc vào chính lớp phủ (nền đen)
+                // Không đóng khi click vào ảnh/video (event.target)
+                if (event.target.classList.contains('close-button') || event.target.id === 'image-overlay') {
+                    this.classList.remove('is-visible');
+                    
+                    // Dọn dẹp nội dung sau khi hiệu ứng kết thúc
+                    setTimeout(() => {
+                        this.innerHTML = ''; 
+                    }, 400);
+                }
+            });
+        }
+    });
+
+    </script>
+</body>
+</html>
