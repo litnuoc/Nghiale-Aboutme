@@ -36,9 +36,9 @@ const pageTemplates = {
     'practical-experiences': `
         <section class="content-section">
         <h1 class= "row-1-header responsive-text" 
-        style=" line-height: 0.9; font-family: 'Montserrat Black';">
-            <span style="display: block;">PRACTICAL</span>
-            <span style="display: block;">EXPERIENCES</span>
+        style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">
+            <span style="display: block;">PRACTI&shy;CAL</span>
+            <span style="display: block; hyphens: auto">EX&shy;PERIENCES</span>
         </h1>
         <section class="row-2-header-content">
             <div class="text-content">
@@ -189,22 +189,22 @@ const pageTemplates = {
     'research-and-teaching': `
         <section class="content-section">
         <h1 class= "row-1-header responsive-text" 
-        style=" line-height: 0.9; font-family: 'Montserrat Black';">
-            <span style="display: block;">RESEARCH</span>
-            <span style="display: block;">& TEACHING</span>
+        style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">
+            <span style="display: block;">RE&shy;SEARCH</span>
+            <span style="display: block;">& TEACH&shy;ING</span>
         </h1>
         <section class="row-2-header-content">
             <div class= "text-content">
-                <p>My research interests have been shaped by a strong academic background in urban and architectural studies, combined with hands-on experience in both government-funded projects and professional architectural practice. I have contributed to various national-level projects that address 
+                <p>My research interests have been shaped by a strong academic background in urban and architectural studies, combined with hands-on experience in both government&#8209;funded projects and professional architectural practice. I have contributed to various national&#8209;level projects that address 
                     <span>Urban Challenges </span> through the lens of <span>Sustainable Development</span>. Drawing on several years of practical experience in architectural firms and 
                     <span>Building Information Modelling (BIM) </span> environments, my current research direction explores the integration of BIM into 
-                    <span>Facility Management</span>, particularly during the operational phase of complex buildings. This focus also forms the foundation of my intended PhD work, aiming to enhance long-term building performance and data-driven asset management.
+                    <span>Facility Management</span>, particularly during the operational phase of complex buildings. This focus also forms the foundation of my intended PhD work, aiming to enhance long&#8209;term building performance and data&#8209;driven asset management.
                 </p>
                 <p>In my teaching, I focus on equipping students with both foundational and advanced skills in architectural representation and digital modeling. My courses cover topics such as Building Information Modelling (BIM), 
-                    <span>Computer-Aided Design (CAD)</span>, and the application of <span>Computational Algorithms</span> to manipulate and analyze building properties. This integrated approach enables students to evaluate building performance and <span>Typological Studies</span> in a logical, objective, precise, and efficient manner. I aim to bridge design thinking with data-driven processes, preparing students for contemporary challenges in architecture and the built environment.</p>
+                    <span>Computer&#8209;Aided Design (CAD)</span>, and the application of <span>Computational Algorithms</span> to manipulate and analyze building properties. This integrated approach enables students to evaluate building performance and <span>Typological Studies</span> in a logical, objective, precise, and efficient manner. I aim to bridge design thinking with data-driven processes, preparing students for contemporary challenges in architecture and the built environment.</p>
                 <p> Beyond the classroom, 
                     I supervise student research and encourage experiential learning through initiatives 
-                    like the National Architecture Festival, Green Summer Workshop, and the International VGU-AAU Workshop.
+                    like the National Architecture Festival, Green Summer Workshop, and the International VGU&#8209;AAU Workshop.
                 </p>
                 <p>RESEARCH INTEREST:
                     <br>Building Information Modelling (BIM). Computer-Aid-Design (CAD), Architectural Design, Green 
@@ -234,7 +234,7 @@ const pageTemplates = {
                         <p>Dr. Le Thi Thu Huong</p>
                     <h4>List of Publication</h4>
                         <p>
-                            <a href="#" class="popup-trigger" data-image-src="assets/image/list-of-publications.jpg">Here</a>
+                            <a href="#" class="popup-trigger" data-image-src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754492703/list-of-publications_kjy3hi.jpg">Here</a>
                         </p>
                 </div>
             </div>
@@ -267,7 +267,7 @@ const pageTemplates = {
                         <p>Dr. Le Thi Thu Huong</p>
                     <h4>List of Teaching Module</h4>
                         <p>
-                            <a href="#" class="popup-trigger" data-image-src="assets/image/list-of-teaching-modules.jpg">Here</a>
+                            <a href="#" class="popup-trigger" data-image-src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754492703/list-of-teaching-modules_c1pxuo.jpg">Here</a>
                         </p>
                 </div>
             </div>
@@ -355,7 +355,7 @@ const pageTemplates = {
     'personal-interests': 
         `<section class="content-section">
             <h1 class= "row-1-header responsive-text" 
-                style=" line-height: 0.9; font-family: 'Montserrat Black';">PERSONAL INTERESTS</h1>
+                style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">PERSON&shy;AL INTEREST&shy;S</h1>
             
             <div class="portfolio-block text-content" style="border-bottom: 3px solid #eee;">
                 <div class="portfolio-main">
@@ -566,7 +566,7 @@ const pageTemplates = {
     'portfolio': `
         <section class="content-section">
             <h1 class= "row-1-header responsive-text" 
-                style=" line-height: 0.9; font-family: 'Montserrat Black';">PORTFOLIO</h1>
+                style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">PORT&shy;FOLIO</h1>
             <div class="portfolio-block text-content" id="chair-architectural-theory" style="border-bottom: 3px solid #000000;">
                 <div class="portfolio-main">
                     <p>This is a collection of projects I have worked on during both my academic journey and professional experience — each one holds a special place for me. If you have any comments or feedback, feel free to reach out through the Contact section. I truly value your thoughts.</p>
@@ -633,7 +633,7 @@ const pageTemplates = {
     'contacts': `
         <section class="content-section">
             <h1 class= "row-1-header responsive-text" 
-                style=" line-height: 0.9; font-family: 'Montserrat Black';">CONTACTS</h1>
+                style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">CONTACTS</h1>
 
             <section style="background-color: #555; padding-bottom: 40px">
                 <div class="portfolio-block" id="contact-portfolio" style="border-bottom:0;">

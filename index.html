@@ -29,6 +29,11 @@
             --text-content-font-size: 18px;
             /* --text-content-font-weight: 400; */
         }
+        .text-content {
+            -webkit-hyphens: none; /* Dành cho trình duyệt Safari */
+            -ms-hyphens: none;     /* Dành cho trình duyệt Microsoft */
+            hyphens: none;         /* Thuộc tính chuẩn */
+        }
         body {
             background-color: var(--background-dark);
             color: var(--text-dark);
@@ -77,6 +82,22 @@
         .video-container { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; }
         .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
+        /* Code mới cho .responsive-text kết hợp cả hai */
+        .responsive-text {
+            font-size: 100px; /* Kích thước mặc định cho desktop */
+
+            /* Cho phép tự động ngắt từ bằng gạch nối */
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+
+        }
+
+        @media (max-width: 860px) {
+            .responsive-text {
+                font-size: 70px; /* Kích thước cho mobile */
+            }
+        }
         /*
         ======================================================================
         QUY TẮC MẶC ĐỊNH (ÁP DỤNG CHO CẢ DESKTOP VÀ MOBILE NẾU KHÔNG BỊ GHI ĐÈ)
@@ -96,14 +117,14 @@
             /* gap: 20px; */
             border-bottom: 3px solid #eee;
             padding-bottom: 16px;
-            hyphens: auto;
+            /* hyphens: auto; */ /* Bạn có thể xóa hoặc comment dòng này */
         }
         .text-content {
             font-family: PT Serif;
             font-size: var(--text-content-font-size);
             line-height: 1.1;
             font-weight: var(--text-content-font-weight);
-            hyphens: auto;
+            /* hyphens: auto; */ /* Bạn có thể xóa hoặc comment dòng này */
         }
         .text-content p span {
             font-weight: bold;
@@ -483,7 +504,7 @@
                 padding: 0;
                 padding-bottom: 20px;
                 padding-top:20px;
-                border-bottom: 1px solid var(--border-dark);
+                border-bottom: 3px solid #eee;
 
                 /* --- Thuộc tính mới thêm vào để slidebar luôn trên cùng --- */
                 position: sticky;
@@ -493,15 +514,20 @@
                 /* Đảm bảo header luôn nằm trên */
                 z-index: 100;
             }
-            .main-content { padding: 20px;
-            padding-top: 0px; }
-            .responsive-text { font-size: 70px; }
+            .main-content { 
+                padding: 20px;
+                padding-top: 0px;
+                padding-left: 60px;
+                padding-right: 60px; 
+            }
+            
             
             /* --- Ghi đè layout của row-2-header-content về 1 cột --- */
             .row-2-header-content {
                 grid-template-columns: 1fr;
+                border-bottom: 1px solid #eee;
             }
-            
+
             /* --- Logic menu trượt --- */
             .sidebar-nav {
                 display: flex;
@@ -535,7 +561,7 @@
                 /* border-top: 1px solid var(--border-dark); */
                 padding-top: 10px; 
                 margin-top: 10px;
-                border-bottom: 3px solid #eee;               
+                border-bottom: 1px solid #eee;               
             }
 
             .course-block .course-details, .portfolio-block .portfolio-details {
@@ -592,12 +618,12 @@
                 border-radius: 5px; /* Đổi thành hình vuông bo góc (hoặc 0 cho vuông sắc cạnh) */
                 object-fit: cover;  /* Đảm bảo ảnh không bị méo khi đổi kích thước */
             }
+            .course-main h2, .portfolio-main h2 {
+            font-family: "Source Sans Pro", sans-serif;}
 
         }
         
-        @media (min-width: 1150px) {
-            .responsive-text { font-size: 100px; }
-        }
+
 
         /* Ẩn thanh cuộn cho trình duyệt Webkit (Chrome, Safari, Edge) */
         .main-content::-webkit-scrollbar {
@@ -844,7 +870,20 @@
                 transform: translateY(0) scale(0.8);
             }
         }
-        
+        /*
+        =====================================================
+        === THÊM CÔNG THỨC ANIMATION "BOUNCE" MỚI  ===
+        =====================================================
+        */
+        @keyframes bounceHint {
+            0%, 100% {
+                transform: translateY(0) scale(0.8);
+            }
+            50% {
+                transform: translateY(-15px) scale(0.8); /* Nhảy lên 15px */
+            }
+        }
+
         /* --- Responsive cho điện thoại --- */
         @media (max-width: 860px) {
             body.landing-active {
@@ -889,8 +928,15 @@
             body.landing-active .landing-left {
                 animation: fadeInUpAndScale 1.5s ease-out 0.4s forwards;
             }
+            /* Code mới trong @media (max-width: 860px) */
             body.landing-active .landing-right {
-                animation: fadeInUpAndScale 1.5s ease-out 1s forwards;
+                /* Áp dụng 2 animation cùng lúc, cách nhau bởi dấu phẩy */
+                animation: 
+                    /* 1. Animation xuất hiện như cũ */
+                    fadeInUpAndScale 1.5s ease-out 1s forwards,
+                    
+                    /* 2. Animation "nhảy lên xuống" bắt đầu sau khi animation 1 kết thúc */
+                    bounceHint 2s ease-in-out 2.5s infinite;
             }
             .landing-divider {
             border: none;
@@ -900,6 +946,10 @@
             margin: 0%;            /* Giữ nguyên khoảng cách trên dưới */
             margin-top: 2rem;
             }
+            .course-details {
+                font-size: 0.8rem;
+            }
+            
         }
 
             /*
@@ -1091,8 +1141,9 @@
             
             const mainContent = document.querySelector('.main-content');
             if (mainContent) {
-                mainContent.scrollTop = 0;
+                mainContent.scrollTop = 0; // Đảm bảo cuộn cho layout desktop
             }
+            window.scrollTo(0, 0); // Lệnh "chắc ăn" để cuộn toàn bộ cửa sổ lên đầu, rất hiệu quả trên mobile
         }
 
         function handleNavigation(requestedPage) {
