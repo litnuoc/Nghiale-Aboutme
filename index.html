@@ -54,6 +54,7 @@
         }
         body.light-theme .course-block,
         body.light-theme .portfolio-block { border-top-color: var(--border-light); }
+        body.light-theme .portfolio-block-contact-tab { border-top-color: var(--border-light); }
         body.light-theme .portfolio-main h2 {color: #FF4300}
 
         body.light-theme .sidebar-nav.is-open ul {list-style: none; color: #FAF8F3;}
@@ -379,13 +380,17 @@
             }
 
             body .main-content .content-section .portfolio-block .portfolio-column-layout .portfolio-column .portfolio-grid-item img.expandable-image,
+            body .main-content .content-section .portfolio-block-contact-tab .portfolio-column-layout .portfolio-column .portfolio-grid-item img.expandable-image,
             body .main-content .content-section .portfolio-block .portfolio-column-layout .portfolio-column .portfolio-grid-item video.expandable-image,
+            body .main-content .content-section .portfolio-block-contact-tab .portfolio-column-layout .portfolio-column .portfolio-grid-item video.expandable-image,
             body .main-content .content-section .portfolio-port-image img.expandable-image {
             cursor: pointer; /* Biểu tượng bàn tay nắm (pan) */
             }
 
             body .main-content .content-section .portfolio-block .portfolio-column-layout .portfolio-column .portfolio-grid-item img.expandable-image:active,
+            body .main-content .content-section .portfolio-block-contact-tab .portfolio-column-layout .portfolio-column .portfolio-grid-item img.expandable-image:active,
             body .main-content .content-section .portfolio-block .portfolio-column-layout .portfolio-column .portfolio-grid-item video.expandable-image:active,
+            body .main-content .content-section .portfolio-block-contact-tab .portfolio-column-layout .portfolio-column .portfolio-grid-item video.expandable-image:active,
             body .main-content .content-section .portfolio-port-image img.expandable-image:active {
             cursor: grabbing; /* Biểu tượng bàn tay đang kéo (pan) khi click và giữ */
             }
@@ -451,6 +456,15 @@
             .portfolio-block {
                 display: grid; 
                 grid-template-columns: 60% 40%;
+                align-items: start; 
+                /* border-top: 1px solid var(--border-dark); */
+                padding-top: 10px; 
+                margin-top: 10px;
+                border-bottom: 3px solid #eee;
+            }
+            .portfolio-block-contact-tab {
+                display: grid; 
+                grid-template-columns: 40% 5% 20% 35%;
                 align-items: start; 
                 /* border-top: 1px solid var(--border-dark); */
                 padding-top: 10px; 
@@ -555,7 +569,7 @@
                 font-size: 1em; font-weight: bold; color: inherit;
             }  
 
-            .course-block, .portfolio-block {
+            .course-block, .portfolio-block, .portfolio-block-contact-tab {
                 display: grid; 
                 align-items: start; 
                 /* border-top: 1px solid var(--border-dark); */
@@ -564,11 +578,11 @@
                 border-bottom: 1px solid #eee;               
             }
 
-            .course-block .course-details, .portfolio-block .portfolio-details {
+            .course-block .course-details, .portfolio-block .portfolio-details, .portfolio-block-contact-tab .portfolio-details {
                 text-align: right;
             }
 
-            .course-block div, .portfolio-block div {padding-top: 0;
+            .course-block div, .portfolio-block div, .portfolio-block-contact-tab div {padding-top: 0;
                 margin-top: 0;}
             .course-details, .portfolio-details {
                 padding-bottom: 40px;

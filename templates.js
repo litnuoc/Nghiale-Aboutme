@@ -631,7 +631,7 @@ const pageTemplates = {
                 style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">CONTACTS</h1>
 
             <section style="background-color: #555; padding-bottom: 40px">
-                <div class="portfolio-block" id="contact-portfolio" style="border-bottom:0;">
+                <div class="portfolio-block-contact-tab" id="contact-portfolio" style="border-bottom:0;">
                     <div class="portfolio-main text-content" style="text-align: center; color: #FAF8F3;">
                         <p style = "padding-top: 20px; color: #FAF8F3;">
                             I am a lecturer and researcher <br> working in an academic environment, but also someone with a strong passion for design and hands-on DIY projects. If you're interested in the work I've done — either from my research or design portfolio — feel free to leave your contact information on the right. <br> I'll be happy to get back to you.
