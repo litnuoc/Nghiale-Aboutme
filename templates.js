@@ -38,7 +38,7 @@ const pageTemplates = {
         <h1 class= "row-1-header responsive-text" 
         style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">
             <span style="display: block;">PRACTI&shy;CAL</span>
-            <span style="display: block; hyphens: auto">EX&shy;PERIENCES</span>
+            <span style="display: block;">EX&shy;PERIENCES</span>
         </h1>
         <section class="row-2-header-content">
             <div class="text-content">
@@ -355,19 +355,20 @@ const pageTemplates = {
     'personal-interests': 
         `<section class="content-section">
             <h1 class= "row-1-header responsive-text" 
-                style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">PERSON&shy;AL INTEREST&shy;S</h1>
+                style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">
+                <span style="display: block;">PERSON&shy;AL</span>
+                <span style="display: block;">INTEREST&shy;S</span>
+            </h1>
             
             <div class="portfolio-block text-content" style="border-bottom: 3px solid #eee;">
-                <div class="portfolio-main">
-                    <p>This is a collection of projects I have worked on during both my academic journey and professional experience — each one holds a special place for me. If you have any comments or feedback, feel free to reach out through the Contact section. I truly value your thoughts.</p>
+                <div class="portfolio-main" style = "padding: 0;margin-bottom: 10px">
+                    <p style = "margin: 0%; padding-bottom: 10px;">
+                    Outside of work, I enjoy a range of hobbies that help me recharge and stay creative. 
+                    I have a strong interest in <strong>visual design, layout composition, and creative direction</strong>—not just professionally, but also as a way to unwind and explore new ideas. 
+                    Whether it’s experimenting with typography, analyzing branding case studies, or casually sketching interface layouts, these activities allow me to expand my design thinking in a relaxed, playful way.
+                    </p>
                 </div>
                 <div></div>
-                <div class="portfolio-details">
-                    <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <p style="font-size: 0.8em; color: #888; margin-top: 10px;">Here's a video where I walk you through my portfolio. More projects will be added soon!</p>
-                </div>
             </div>
 
             <div class="portfolio-content-wrapper" style="border-bottom: 3px solid #eee;">
@@ -568,17 +569,11 @@ const pageTemplates = {
             <h1 class= "row-1-header responsive-text" 
                 style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">PORT&shy;FOLIO</h1>
             <div class="portfolio-block text-content" id="chair-architectural-theory" style="border-bottom: 3px solid #000000;">
-                <div class="portfolio-main">
-                    <p>This is a collection of projects I have worked on during both my academic journey and professional experience — each one holds a special place for me. If you have any comments or feedback, feel free to reach out through the Contact section. I truly value your thoughts.</p>
+                <div class="portfolio-main" style = "padding: 0;">
+                    <p style = "margin: 0%; padding-bottom: 10px;">This is a collection of projects I have worked on during both my academic journey and professional experience — each one holds a special place for me. If you have any comments or feedback, feel free to reach out through the Contact section. I truly value your thoughts.</p>
                     
                 </div>
                 <div></div>
-                <div class="portfolio-details">
-                        <div class="video-container">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <p style="font-size: 0.8em; color: #888; margin-top: 10px;">Here's a video where I walk you through my portfolio. More projects will be added soon!</p>
-                </div>
             </div>
 
             <div class="portfolio-port-image text-content">
