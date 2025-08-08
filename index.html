@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=PT+Serif:wght@400;700&family=Source+Sans+Pro:wght@400;700;900&display=swap" rel="stylesheet">
-
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754641436/logo-muc_mit8j8.png">
     <!--
         =====================================================
         ====================== CSS ==========================
@@ -22,7 +22,7 @@
             --background-dark: #000000;
             --text-dark: #f5f2f2;
             --border-dark: #555;
-            --background-light: #FAF8F3;
+            --background-light: #fbfbfb;
             --text-light: #000000;
             --border-light: #dddddd;
             --font-size-sidebar: 12px;
@@ -128,7 +128,7 @@
         .text-content {
             font-family: PT Serif;
             font-size: var(--text-content-font-size);
-            line-height: 1.1;
+            line-height: 1.3;
             font-weight: var(--text-content-font-weight);
             /* hyphens: auto; */ /* Bạn có thể xóa hoặc comment dòng này */
         }
@@ -199,11 +199,11 @@
             border: none;
             outline: none;
             border-radius: 2px;
-            background-color: #FAF8F3;
+            background-color: #c6c5c4;
             }
             .contact-form input::placeholder,
             .contact-form textarea::placeholder {
-            color: #888;
+            color: #525252;
             font-family: 'Helvetica Neue', Arial, sans-serif;
             }
             .submit-btn {
@@ -523,7 +523,7 @@
                 padding: 0;
                 padding-bottom: 20px;
                 padding-top:20px;
-                border-bottom: 3px solid #eee;
+                /* border-bottom: 3px solid #eee;
 
                 /* --- Thuộc tính mới thêm vào để slidebar luôn trên cùng --- */
                 position: sticky;
@@ -594,12 +594,12 @@
                 padding-top: 0;
                 margin-top: 0;}
             .course-details h4, .portfolio-details h4 {
-                margin-bottom: 4px;
+                margin-bottom: 0px;
                 margin-top: 4px;
             }
             .course-details p, .portfolio-details p {
-                margin-bottom: 2px;
-                margin-top: 2px;
+                margin-bottom: 15px;
+                margin-top: 0px;
             }
             /* --- thêm vào cho contacts --- */
             .contact-section {
@@ -1020,6 +1020,48 @@
                 animation: fadeInUp 0.6s ease-out 0.8s forwards;
             }
 
+            /* CSS cho nội dung văn bản bên trong popup */
+            .popup-content-text {
+                background-color: var(--background-light);
+                color: var(--text-light);
+                max-width: 800px;
+                max-height: 80vh;
+                overflow-y: auto; /* Thêm thanh cuộn nếu nội dung quá dài */
+                padding: 30px 40px;
+                border-radius: 8px;
+                position: relative;
+                text-align: left;
+                line-height: 1.6;
+                font-family: 'PT Serif', serif;
+            }
+
+            /* Định dạng cho các thẻ bên trong popup */
+            .popup-content-text h2 {
+                font-family: 'Montserrat', sans-serif;
+                margin-top: 0;
+                border-bottom: 2px solid #eee;
+                padding-bottom: 15px;
+            }
+
+            .popup-content-text ul {
+                padding-left: 20px;
+            }
+
+            /* Thay đổi màu cho link trigger */
+            .course-popup-trigger {
+                font-family: 'Montserrat', sans-serif;
+                color: #fd7c4c; /* Màu cam nhạt giống nút 'Send' */
+                font-weight: bold;
+                text-decoration: underline;
+                transition: color 0.3s ease; /* Hiệu ứng chuyển màu mượt */
+                cursor: pointer;
+            }
+
+            .course-popup-trigger:hover {
+                color: #FF4300; /* Màu cam đậm hơn khi rê chuột */
+                text-decoration: underline; /* Thêm lại gạch chân khi rê chuột để rõ ràng hơn */
+            }
+
     </style>
 </head>
 <body>
@@ -1034,10 +1076,10 @@
                     </div>
                     <ul>
                         <li style="padding-top: 20px;"><a href="#" class="nav-link active"  data-page="practical-experiences">PRACTICAL EXPERIENCES</a></li>
-                        <li><a href="#" class="nav-link" data-page="research-and-teaching">REASEARCH & TEACHING</a></li>
-                        <li><a href="#" class="nav-link" data-page="portfolio">PORTFOLIO</a></li>
+                        <li><a href="#" class="nav-link" data-page="research-and-teaching">RESEARCH <br>& TEACHING</a></li>
                         <li><a href="#" class="nav-link" data-page="personal-interests">PERSONAL INTERESTS</a></li>
-                        <li><a href="#" class="nav-link" data-page="contacts">CONTACTS</a></li>
+                        <li><a href="#" class="nav-link" data-page="portfolio">PORTFOLIO</a></li>
+                        <li><a href="#" class="nav-link" data-page="contacts">COURSES-CONTACT</a></li>
                     </ul>
                 </div>
                 <div class="sidebar-footer">
@@ -1306,7 +1348,37 @@
                 imageSrc = target.dataset.imageSrc;
                 isVideo = false;
             }
+            // =======================================================
+            // === BẮT ĐẦU KHỐI CODE MỚI THÊM VÀO ĐỂ HIỂN THỊ KHÓA HỌC ===
+            // =======================================================
+            else if (target.closest('.course-popup-trigger')) {
+                event.preventDefault(); // Ngăn link nhảy trang
+                
+                const triggerLink = target.closest('.course-popup-trigger');
+                const courseId = triggerLink.dataset.courseId; // Lấy ID khóa học
+                const contentHTML = courseDetails[courseId]; // Lấy nội dung HTML từ object
 
+                if (contentHTML) {
+                    // Tạo một div để chứa nội dung văn bản
+                    const contentWrapper = document.createElement('div');
+                    contentWrapper.className = 'popup-content-text';
+                    contentWrapper.innerHTML = contentHTML;
+
+                    // Tạo nút X (tái sử dụng logic cũ)
+                    const closeButton = document.createElement('div');
+                    closeButton.className = 'close-button';
+                    closeButton.innerHTML = '&times;';
+
+                    // Dọn dẹp và thêm nội dung mới vào lớp phủ
+                    imageOverlay.innerHTML = '';
+                    imageOverlay.appendChild(contentWrapper);
+                    imageOverlay.appendChild(closeButton);
+                    imageOverlay.classList.add('is-visible');
+                }
+            }
+            // =======================================================
+            // === KẾT THÚC KHỐI CODE MỚI ===
+            // =======================================================
             if (imageSrc) {
                 // Tạo ảnh hoặc video
                 const newElement = isVideo ? document.createElement('video') : document.createElement('img');

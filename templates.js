@@ -1,3 +1,306 @@
+const courseDetails = {
+    'revit-course': `
+        <h2>Introduction to Revit Architecture</h2>
+            <p style = "font-weight: bold;">This course is being updated every week, with new sections being added regularly.</p>
+        <h3>Course Description</h3>
+            <p>This is a comprehensive and continuously updated course, with new content added weekly, 
+            designed for architects and anyone looking to begin with the BIM process. Featuring detailed 
+            instructions, numerous real-world project examples, and professional execution standards, 
+            this course will significantly enhance your learning experience.
+            </p>
+            <p>        
+                <ul>
+                    <li>Want to learn a 3D modeling software to create renderings and deliver detailed execution plans to clients?</li>
+                    <li>Did you know Revit offers powerful capabilities, and once mastered, there’s almost nothing you can’t model in 3D?</li>
+                    <li>Have you learned Revit before but struggled to complete an entire project?</li>
+                    <li>To truly become a professional BIM modeler, mastering Revit is just the beginning; there are several other essential BIM-related topics you need to know.</li>
+                </ul>
+            </p>
+            <p>Drawing from years of experience on projects of all sizes worldwide, 
+            I have structured this course to provide the most comprehensive instruction. 
+            My commitment is that upon completion, you will have mastered every crucial 
+            aspect of the Revit software. This knowledge is designed to fully equip you to 
+            confidently enter the job market as a skilled 3D modeler or a professional BIM specialist.
+            </p>
+
+        <h3>Course Topics Include:</h3>
+            <ol>
+                <li>Introduction to Revit Architecture</li>
+                <li>Fundamental concepts in Revit and BIM</li>
+                <li>Familiarization with the user interface of Revit Architecture</li>
+                <li>BIM-based modeling in Revit Architecture</li>
+                <li>Creating various views</li>
+                <li>3D modeling tools in Revit Architecture</li>
+                <li>Preparing construction drawings in Revit</li>
+                <li>3D modeling with the highest level of detail</li>
+                <li>Creating families as needed for various projects and companies</li>
+                <li>Advanced techniques in Revit Architecture</li>
+                <li>Practical exercises and real-world examples</li>
+                <li>Practical tips and troubleshooting guide</li>
+            </ol>
+            <p>In this course, you’ll have access to Revit files from a variety of real 
+            projects to practice with, along with quizzes in each section to test your progress.
+            </p>
+            <p>I’ll be with you every step of the way to help you achieve the best possible learning results. 
+            Don’t hesitate to ask questions to enhance your understanding. Consistent practice and repetition are essential for mastering these skills—so let’s begin and take this journey together.
+            </p>
+        <h3>Who this course is for:</h3>
+            <p><ul>
+                <li>Architectural Students</li>
+                <li>Architects</li>
+                <li>BIM Modelers</li>
+                <li>Revit Users</li>
+                <li>BIM Coordinators</li>
+                <li>3D Modelers</li>
+                </ul>
+            </p>
+    `
+    ,
+    'sketchup-course': `
+        <h2>Introduction to Revit Architecture</h2>
+            <p style = "font-weight: bold;">This course is being updated every week, with new sections being added regularly.</p>
+        <h3>Course Description</h3>    
+            <p>Learn SketchUp by developing good modeling habits and becoming proficient in real-world workflows.</p>
+            <p>This course is designed for SketchUp users aiming to work at a professional level. 
+            It is suitable for both motivated beginners and experienced users, and covers how to 
+            produce well-organized, practical 3D models and refined presentations with SketchUp Pro.</p>
+
+            <p>The course begins with creating a custom template and configuring toolbars for efficiency, 
+            followed by a detailed introduction to SketchUp’s primary modeling tools.</p>
+            <p>During the course, you will create a simple living room model from the ground up—building walls, adding doors and windows, and organizing the design with groups and components. You will also learn how to position and adjust furniture, apply materials and textures, and add custom artwork to enhance the space.</p>
+            <p>As you move forward, you will include architectural elements such as trim and baseboards, use tags to control visibility, and set up scenes to save views for renderings, plans, and elevations.</p>
+            <p>In the final stage, you will transfer your model to LayOut, SketchUp’s presentation tool, to produce a complete document with title blocks, dimensions, labels, and design notes.
+            </p>
+            <p>By the conclusion of the course, you will be able to model interior spaces efficiently, manage projects in an organized way, and prepare documentation suitable for clients, presentations, or project teams.</p>
+            <p>Drawing from years of experience on projects of all sizes worldwide, 
+            I have structured this course to provide the most comprehensive instruction. 
+            My commitment is that upon completion, you will have mastered every crucial 
+            aspect of the Revit software. This knowledge is designed to fully equip you to 
+            confidently enter the job market as a skilled 3D modeler.
+            </p>
+
+        <h3>Course Topics Include:</h3>
+            <ol>
+            <li>Overview of SketchUp</li>
+            <li>Basic drawing tools: Points, lines, surfaces</li>
+            <li>Continuation: Basic drawing tools: Points, lines, surfaces</li>
+            <li>Practice: Test exercise 1</li>
+            <li>Installing Plugins / Extensions: 1001 bit Plugin</li>
+            <li>Methods for modeling building exteriors</li>
+            <li>Practice: Test exercise 2</li>
+            <li>Methods for modeling building interiors</li>
+            <li>Furniture libraries, material libraries, and Plugins (Sandbox, Soap Bubble, Round Corner) for interior modeling</li>
+            <li>Continuation: Furniture libraries, material libraries, and Plugins (Sandbox, Soap Bubble, Round Corner) for interior modeling</li>
+            <li>Practice: Test exercise 3</li>
+            <li>Vray materials</li>
+            <li>Setting up the environment in Vray</li>
+            <li>Practice: Test exercise 4</li>
+            <li>Presenting ideas and printing the final product</li>
+            </ol>
+            <p>In this course, you’ll have access to SketchUp files from a variety of real 
+            projects to practice with, along with quizzes in each section to test your progress.
+            </p>
+            <p>I’ll be with you every step of the way to help you achieve the best possible learning results. 
+            Don’t hesitate to ask questions to enhance your understanding. Consistent practice and repetition are essential for mastering these skills—so let’s begin and take this journey together.
+            </p>
+        <h3>Who this course is for:</h3>
+        <p><ul>
+            <li>Architecture Students</li>
+            <li>Beginners seeking to develop solid, professional SketchUp skills from the outset</li>
+            <li>Existing SketchUp users with basic knowledge who want to work more quickly, efficiently, and precisely</li>
+            <li>Interior designers, architects, contractors, and other professionals who require well-structured, practical 3D models and professional presentation documents</li>
+            <li>Individuals intending to use SketchUp for actual project work</li>
+            </ul>
+        </p>
+    `
+    ,
+    'autocad-course': `
+        <h2>Introduction to AutoCAD Architecture</h2>
+            <p style = "font-weight: bold;">This course covers everything you need to learn AutoCAD from the scratch</p>
+            <h3>Major Highlights of the Course</h3>
+                <ul>
+                    <li>Comprehensive AutoCAD course with only 8 lesson</li>
+                    <li>All lesson files available for download</li>
+                    <li>Self-assessment practice drawings after each section</li>
+                    <li>eBook with 150 AutoCAD commands and quizzes included</li>
+                    <li>Taught by a certified AutoCAD professional</li>
+                    <li>Additional practice drawings and projects at the end of the course</li>
+                </ul>
+
+            <h3>What This Course Is About</h3>
+                <p>
+                    This is a full-length AutoCAD learning package for versions 2018, 2019, 2020, and 2021.
+                    It covers nearly all topics required to work effectively with the software and is suitable
+                    for both beginners and experienced users.
+                </p>
+                <p>
+                    A beginner can start from the first lesson and learn from scratch. Experienced users can
+                    choose the topics they need without reviewing the basics.
+                </p>
+
+            <h3>Project-Oriented Course</h3>
+                <p>
+                    Lessons are built around projects, and tools and commands are taught with real-world applications.
+                    Each module ends with a practical question related to the material, encouraging students to review
+                    their understanding before moving on.
+                </p>
+
+            <h3>Drawings for Practice</h3>
+                <p>
+                    In addition to module-end questions, the course includes a dedicated section for
+                    practice drawings and projects such as floor plans, circuit diagrams, and others.
+                </p>
+
+            <h3>Instructor Support for Questions</h3>
+                <p>
+                    Students are encouraged to ask course-related questions in the Q&A section.
+                    The instructor responds to all questions promptly and has answered every
+                    course-related query from students so far.
+                </p>
+                <p>
+                    If you are unsure about enrolling, you can watch preview videos before joining.
+                    Even after enrolling, if the course does not meet your expectations, you may
+                    request a refund within 30 days of purchase.
+                </p>
+
+            <h3>Pre-requisites</h3>
+                <p>
+                    Access to AutoCAD software (student, trial, or commercial version) is required.
+                    The course is also compatible with AutoCAD LT.
+                </p>
+
+            <h3>Course Topics Include:</h3>
+                <ol>
+                    <li>Getting Started with AutoCAD</li>
+                    <li>Drawing and Editing Commands</li>
+                    <li>Precision Tools</li>
+                    <li>Modification Commands</li>
+                    <li>Drawing Management and Formatting</li>
+                    <li>Advanced Topics</li>
+                </ol>
+                <p>In this course, you’ll have access to AutoCad files from a variety of real 
+                projects to practice with, along with quizzes in each section to test your progress.
+                </p>
+                <p>I’ll be with you every step of the way to help you achieve the best possible learning results. 
+                Don’t hesitate to ask questions to enhance your understanding. Consistent practice and repetition are essential for mastering these skills—so let’s begin and take this journey together.
+                </p>
+            <h3>Who this course is for:</h3>
+                <p><ul>
+                    <li>Architecture Students</li>
+                    <li>If you are a student with no prior AutoCAD experience and are seeking a complete course 
+                    with extensive practice questions, this course is suitable for you.</li>
+                    <li>If you are a working professional aiming to improve your skills and 
+                    explore new and advanced AutoCAD topics, this course is also appropriate.</li>
+                    </ul>
+                </p>
+    `
+    ,
+    'photoshop-course': `
+        <h2>Introduction to Adobe-Photoshop</h2>
+            <p style = "font-weight: bold;">This course is being updated every week, with new sections being added regularly.</p>
+        <h3>Course Description</h3>
+            <p>Learn how to edit contemporary sections, elevations, site plans, diagrams, and visualizations in Photoshop.
+            </p>
+            <p>        
+                Each module focuses on a separate topic and includes ready-to-use resources so you can 
+                reproduce everything shown in the tutorials. You’ll also receive the original Photoshop files, 
+                allowing you to copy settings, layers, and other elements into your own projects. Lessons are 
+                split into short videos that guide you step by step through the process.
+            </p>
+            <p>It doesn’t matter which version of Adobe Photoshop you use; however, 
+            this course is not designed for complete beginners. Beginners are still welcome, 
+            as all steps and shortcuts are explained throughout, but it’s recommended that you have at 
+            least some basic knowledge of Photoshop.
+            </p>
+            <p>Updates are planned in the near future. Suggestions for upcoming 
+            updates and add-ons are encouraged, and your ideas and feedback are always welcome.
+            </p>
+
+        <h3>Course Topics Include:</h3>
+            <ol>
+                <li>Intro</li>
+                <li>Siteplan</li>
+                <li>Section</li>
+                <li>Exploded Axon</li>
+                <li>Elevations</li>
+                <li>Visualisations</li>
+                <li>Blur, Dust and Lighting Effects</li>
+                <li>Water Reflections</li>
+            </ol>
+            <p>In this course, you’ll have access to Photoshop files from a variety of real 
+            projects to practice with, along with quizzes in each section to test your progress.
+            </p>
+            <p>I’ll be with you every step of the way to help you achieve the best possible learning results. 
+            Don’t hesitate to ask questions to enhance your understanding. Consistent practice and repetition are essential for mastering these skills—so let’s begin and take this journey together.
+            </p>
+        <h3>Who this course is for:</h3>
+            <p><ul>
+                <li>Architects</li>
+                <li>Landscape Architects</li>
+                <li>Drafters</li>
+                <li>Interior Architects</li>
+                <li>Architecture Students</li>
+                <li>Designers</li>
+                </ul>
+            </p>
+    `
+    ,
+    'indesign-course': `
+        <h2>Introduction to Adobe-Indesign</h2>
+            <p style = "font-weight: bold;">This course is being updated every week, with new sections being added regularly.</p>
+        <h3>Course Description</h3>
+            <p>
+                This course is for individuals who want to present their architectural projects professionally and attractively.
+                Whether you are a student, freelancer, or employee, it will guide you in creating a portfolio that reflects your skills and style.
+                You will learn how to:
+            </p>
+            <ul>
+                <li>Design a portfolio layout suited to your style and purpose.</li>
+                <li>Use InDesign’s tools and features to create and edit text, images, graphics, and tables.</li>
+                <li>Organize portfolio content into sections and pages.</li>
+                <li>Export and print your portfolio as a PDF or book.</li>
+            </ul>
+            <p>
+                By the end of the course, you will have a 12-page portfolio showcasing two of your projects in detail.
+                You will also gain the confidence and knowledge to design your own portfolio independently.
+            </p>
+            <p>
+                In addition to creating a portfolio, the course aims to build InDesign skills for a variety of architectural applications.
+                Additional topics to be added over time include:
+            </p>
+            <ul>
+                <li>Creating presentation files, magazines, and books for projects.</li>
+                <li>Developing interactive presentations and animations for clients.</li>
+                <li>Collaborating with other designers and architects using InDesign.</li>
+            </ul>
+            <p>
+                The course will continue to be updated with more content to serve as a complete InDesign resource for architects.
+            </p>
+        <h3>Course Topics Include:</h3>
+            <ol>
+                <li>Introduction to InDesign</li>
+                <li>Build an Architectural Portfolio with InDesign</li>
+                <li>Create a Moodboard with InDesign</li>
+                <li>Create a Case Study Report with InDesign (Brand New Section)</li>
+            </ol>
+            <p>In this course, you’ll have access to Indesign files from a variety of real 
+            projects to practice with, along with quizzes in each section to test your progress.
+            </p>
+            <p>I’ll be with you every step of the way to help you achieve the best possible learning results. 
+            Don’t hesitate to ask questions to enhance your understanding. Consistent practice and repetition are essential for mastering these skills—so let’s begin and take this journey together.
+            </p>
+        <h3>Who this course is for:</h3>
+            <p><ul>
+                  <li>Architects</li>
+                    <li>Interior Designers</li>
+                    <li>Architecture Students</li>
+                    <li>Design Students</li>
+                    <li>General Public interested in Design</li>
+                </ul>
+            </p>
+    `
+    // Bạn có thể thêm các khóa học khác ở đây, ví dụ: 'photoshop-course': `<h2>Nội dung khóa Photoshop...</h2>`
+};
 const pageTemplates = {
     'landing': `
         <div class="landing-container">
@@ -7,7 +310,7 @@ const pageTemplates = {
                 <p class="landing-title">Architect, Researcher & BIM Specialist</p>
                 
                 <hr class="landing-divider">
-                <p class="landing-subtitle">GENERALIST - INFJ</p>
+                <p class="landing-subtitle" style ="text-align: center">PROCASTINATOR<br>GENERALIST - INFJ</p>
                 <div class="landing-icons">
                     <img src="assets/image/software-skill.png" alt="Software Icons" style="height:80px;">
                 </div>
@@ -21,7 +324,7 @@ const pageTemplates = {
                     <a href="#" class="landing-nav-link" data-page="research-and-teaching">Research & Teaching</a>
                     <a href="#" class="landing-nav-link" data-page="personal-interests">Personal Interests</a>
                     <a href="#" class="landing-nav-link" data-page="portfolio">Portfolio</a>
-                    <a href="#" class="landing-nav-link" data-page="contacts">Contact</a>
+                    <a href="#" class="landing-nav-link" data-page="contacts">Courses-Contact</a>
                 </nav>
                 <div class="landing-contact">
                     <p>+84 938133483</p>
@@ -55,7 +358,7 @@ const pageTemplates = {
         </section>
             <div class="course-block" id="Architect-BIM-Senior">
                 <div class="course-main text-content">
-                    <h2>Architect & <br> BIM Specialist</h2>
+                    <h2>ARCHITECT & <br> BIM SPECIALIST</h2>
                     <p>
                         ▪ Develop and maintain Building Information Modeling (BIM) for the entire Vietnam-Germany University (VGU) campus using BIM software. 
                         <br>▪ Develop, implement, and maintain digital protocols for projects such as the BIM Execution Plan, BIM 
@@ -85,7 +388,7 @@ const pageTemplates = {
             </div>
             <div class="course-block" id="Architect-BIM-Senior">
                 <div class="course-main text-content">
-                    <h2>Architect- BIM Senior</h2>
+                    <h2>ARCHITECT- BIM SENIOR</h2>
                     <p>
                         ▪ Working in correctional center design: the design of the architecture, interior, and landscape to create a 
                         rehabilitative space for prisoners, a welcoming space for visitor, a safe and comfortable space for staff 
@@ -114,7 +417,7 @@ const pageTemplates = {
             </div>
             <div class="course-block" id="Architect-team-leader">
                 <div class="course-main text-content">
-                    <h2>Architect- Team Leader</h2>
+                    <h2>ARCHITECT - TEAM LEADER</h2>
                     <p>
                         ▪ Build 3D BIM for residential design, commercial design and urban design. 
                         <br>▪ Play the role of team leader to connect all member from different department to plan investment construction projects 
@@ -136,7 +439,7 @@ const pageTemplates = {
             
             <div class="course-block" id="Junior-Planner">
                 <div class="course-main text-content">
-                    <h2>Junior Planner</h2>
+                    <h2>JUNIOR PLANNER</h2>
                     <p>
                         ▪ Design Residential and Commercial Building 
                         <br>▪ Knowledge of design and construction technique detailing is pre-requisite 
@@ -159,7 +462,7 @@ const pageTemplates = {
 
             <div class="course-block" id="Planning-Specialist">
                 <div class="course-main text-content">
-                    <h2>Planning Specialist</h2>
+                    <h2>PLANNING SPECIALIST</h2>
                     <p>
                         ▪ Adjust and analyse the statistical width of road in Tan Phu district 
                         <br>▪ Adjust master plan of resettlement areas 
@@ -214,7 +517,7 @@ const pageTemplates = {
         </section>
             <div class="course-block" id="research-teaching-assitant">
                 <div class="course-main text-content">
-                    <h2>Research and Teaching Assistant (RTA)</h2>
+                    <h2>RESEARCH & TEACHING ASSISTANT</h2>
                     <p>▪ Teaching Assistant for some modules in SUD master program 
                         <br>▪ Support coordinator of Architecture (ARC) bachelor program to build up in terms of administration, 
                         research, and teaching matters. 
@@ -241,7 +544,7 @@ const pageTemplates = {
             
             <div class="course-block" id="Lab-engineer-rta">
                 <div class="course-main text-content">
-                    <h2>Lab Engineer cum RTA</h2>
+                    <h2>LAB ENGINEER - RTA</h2>
                     <p style="margin-bottom: 0;padding-bottom:0;"> ▪ Continue as RTA 
                         <br>▪ Manage Laboratory operation and maintenance for ARC program in VGU 
                         <br>▪ Lead teaching in the Foundation year of the ARC program. 
@@ -274,7 +577,7 @@ const pageTemplates = {
 
             <div class="course-block" id="Teachnician">
                 <div class="course-main text-content">
-                    <h2>Technician
+                    <h2>TECHNICIAN
                         <p style="margin-top:6px;padding-top:0;font-size:.4em;font-style: italic; font-weight: normal">
                         (International Competition: Planning Concept for the Development of 
                         a Highly Interactive Innovation District in Eastern Ho Chi Minh city.)
@@ -300,7 +603,7 @@ const pageTemplates = {
 
             <div class="course-block" id="intern">
                 <div class="course-main text-content">
-                    <h2>Research Intern
+                    <h2>RESEARCH INTERN
                         <p style="margin-top:6px;padding-top:0;font-size:.4em;font-style: italic; font-weight: normal">
                         (Team Member for Government Projects)
                         </p>
@@ -576,43 +879,43 @@ const pageTemplates = {
                 <div></div>
             </div>
 
-            <div class="portfolio-port-image text-content">
-                <p> URBAN DESIGN (TRAN PHU STREET - NHATRANG CITY)
+            <div class="portfolio-port-image text-content" style = "padding-left: 0px;">
+                <p style = "font-family: 'Helvetica Neue', Arial, sans-serif;"> URBAN DESIGN (TRAN PHU STREET - NHATRANG CITY)
                     <br> <span style="font-size: 0.7em; color: black"> _FINAL GRADUTED PROJECT_</span>
                 <br><img src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754213811/port1_ghj36k.jpg" class="expandable-image" alt="Portfolio-image" width="65%" style = "padding-top: 10px">
             </div>
-            <div class="portfolio-port-image text-content">
-                <p> GREEN BUILDING CONCEPT (DISTRICT 2- HCM)
+            <div class="portfolio-port-image text-content" style = "padding-left: 0px;">
+                <p style = "font-family: 'Helvetica Neue', Arial, sans-serif;"> GREEN BUILDING CONCEPT (DISTRICT 2- HCM)
                     <br> <span style="font-size: 0.7em; color: black"> _PROJECT GREEN BUILDING MODULE_
                 <br><img src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754213887/port2_z1l4ed.jpg" class="expandable-image" alt="Portfolio-image" width="65%" style = "padding-top: 10px">
             </div>                  
-            <div class="portfolio-port-image text-content">
-                <p> DONG IL FACTORY (DONG NAI PROVINCE)
+            <div class="portfolio-port-image text-content" style = "padding-left: 0px;">
+                <p style = "font-family: 'Helvetica Neue', Arial, sans-serif;"> DONG IL FACTORY (DONG NAI PROVINCE)
                     <br> <span style="font-size: 0.7em; color: black"> _WORK IN JLV COMPANY_
                 <br><img src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754214086/port3_cevnhl.jpg" class="expandable-image" alt="Portfolio-image" width="65%" style = "padding-top: 10px">
             </div>
-            <div class="portfolio-port-image text-content">
-                <p> THE SUN AVENUE DEPARTMENT (DISTRICT 2 -HCM)
+            <div class="portfolio-port-image text-content" style = "padding-left: 0px;">
+                <p style = "font-family: 'Helvetica Neue', Arial, sans-serif;"> THE SUN AVENUE DEPARTMENT (DISTRICT 2 -HCM)
                     <br> <span style="font-size: 0.7em; color: black"> _WORK IN JLV COMPANY_
                 <br><img src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754214086/port4_tokqx1.jpg" class="expandable-image" alt="Portfolio-image" width="65%" style = "padding-top: 10px">
             </div>
-            <div class="portfolio-port-image text-content">
-                <p> HB TOWER (ME LINH SQUARE- DISTRICT 1 -HCM)
+            <div class="portfolio-port-image text-content" style = "padding-left: 0px;">
+                <p style = "font-family: 'Helvetica Neue', Arial, sans-serif;"> HB TOWER (ME LINH SQUARE- DISTRICT 1 -HCM)
                     <br> <span style="font-size: 0.7em; color: black"> _WORK IN JLV COMPANY_
                 <br><img src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754214082/port5_x3dwwn.jpg" class="expandable-image" alt="Portfolio-image" width="65%" style = "padding-top: 10px">
             </div>
-            <div class="portfolio-port-image text-content">
-                <p> DI AN CAMPUS MASTERPLAN (THU DUC DISTRICT-HCM)
+            <div class="portfolio-port-image text-content" style = "padding-left: 0px;">
+                <p style = "font-family: 'Helvetica Neue', Arial, sans-serif;"> DI AN CAMPUS MASTERPLAN (THU DUC DISTRICT-HCM)
                     <br> <span style="font-size: 0.7em; color: black"> _WORK IN JLV COMPANY_
                 <br><img src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754214082/port6_pfzhal.jpg" class="expandable-image" alt="Portfolio-image" width="65%" style = "padding-top: 10px">
             </div>
-            <div class="portfolio-port-image text-content">
-                <p> TRI VIET HOI AN RESORT (CUA DAI WARD- HOI AN CITY)
+            <div class="portfolio-port-image text-content" style = "padding-left: 0px;">
+                <p style = "font-family: 'Helvetica Neue', Arial, sans-serif;"> TRI VIET HOI AN RESORT (CUA DAI WARD- HOI AN CITY)
                     <br> <span style="font-size: 0.7em; color: black"> _WORK IN SYNECTICS COMPANY_
                 <br><img src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754214078/port7_cdrppt.jpg" class="expandable-image" width="65%" style = "padding-top: 10px">
             </div>
-            <div class="portfolio-port-image text-content">
-                <p> CORECTIONAL CENTER: CRRP PROJECT
+            <div class="portfolio-port-image text-content" style = "padding-left: 0px;">
+                <p style = "font-family: 'Helvetica Neue', Arial, sans-serif;"> CORECTIONAL CENTER: CRRP PROJECT
                     <br> <span style="font-size: 0.7em; color: black"> _WORK IN ATLAS INDUSTRIES LTD._
                 <br><img src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754214078/port8_iznhmo.jpg" alt="Portfolio-image" width="65%" style = "padding-top: 10px">
             </div>
@@ -630,13 +933,42 @@ const pageTemplates = {
             <h1 class= "row-1-header responsive-text" 
                 style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">CONTACTS</h1>
 
-            <section style="background-color: #555; padding-bottom: 40px">
+            <section style="padding-bottom: 40px">
                 <div class="portfolio-block-contact-tab" id="contact-portfolio" style="border-bottom:0;">
-                    <div class="portfolio-main text-content" style="text-align: center; color: #FAF8F3;">
-                        <p style = "padding-top: 20px; color: #FAF8F3;">
-                            I am a lecturer and researcher <br> working in an academic environment, but also someone with a strong passion for design and hands-on DIY projects. If you're interested in the work I've done — either from my research or design portfolio — feel free to leave your contact information on the right. <br> I'll be happy to get back to you.
+                    <div class="portfolio-main text-content" style="text-align: left; color: #000000ff; padding-left: 0px;">
+                        <p style = "padding-top: 0px; color: #000000ff; line-height: 1.6;">
+                            I am a lecturer and researcher working in an academic environment, but also someone with a strong passion for design and hands-on DIY projects. 
+                            If you're interested in the work I've done (in 
+                            <a href="#personal-interests" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; font-weight: bold;">Personal Interests</a>
+                            ) — either from my research or design portfolio (in 
+                            <a href="#portfolio" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; font-weight: bold;">Portfolio</a>
+                            ) — feel free to leave your contact information on the right.
                         </p>
-                        <p style = "padding-left: 15px;">nghiaktsg@gmail.com<br>
+                        <p style = "padding-top: 20px; color: #000000ff; line-height: 1.6;">
+                            In addition, I offer private tutoring in software subjects related to architectural skills. 
+                            If you are interested, please get in touch. 
+                            The syllabus for these courses can be found in list below:
+                            <ul>
+                                <li><a href="#" class="course-popup-trigger" data-course-id="autocad-course">
+                                        <strong>AUTOCAD</strong>
+                                    </a>.</li>
+                                <li><a href="#" class="course-popup-trigger" data-course-id="revit-course">
+                                        <strong>REVIT</strong>
+                                    </a>.</li>
+                                <li><a href="#" class="course-popup-trigger" data-course-id="sketchup-course">
+                                        <strong>SKETCH UP</strong>
+                                    </a>.</li>
+                                <li><a href="#" class="course-popup-trigger" data-course-id="photoshop-course">
+                                        <strong>PHOTOSHOP</strong>
+                                    </a>.</li>
+                                <li><a href="#" class="course-popup-trigger" data-course-id="indesign-course">
+                                        <strong>INDESIGN</strong>
+                                    </a>.</li>
+                            </ul>
+                        </p>
+                        
+                        <br><img src="https://res.cloudinary.com/dtvjtjf4i/image/upload/v1754638374/personal_website_copy_ridd3v.png" class="expandable-image" alt="Portfolio-image" width="100%" style = "padding-top: 10px">
+                        <p style = "padding-left: 15px; text-align: right;">Email: nghiaktsg@gmail.com<br>
                         Tel: +84-938133483</p>
                     </div>
                     <div></div>
