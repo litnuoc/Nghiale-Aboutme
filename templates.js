@@ -982,7 +982,7 @@ const pageTemplates = {
     'contacts': `
         <section class="content-section">
             <h1 class= "row-1-header responsive-text" 
-                style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">CONTACTS</h1>
+                style=" line-height: 0.9; font-family: 'Montserrat'; font-weight: 900;">COURSE <br>& CONTACT</h1>
 
             <section style="padding-bottom: 40px">
                 <div class="portfolio-block-contact-tab" id="contact-portfolio" style="border-bottom:0;">
