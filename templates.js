@@ -1,42 +1,53 @@
 const courseDetails = {
     'revit-course': `
-        <h2>Introduction to Revit Architecture</h2>
+        <h2>Introduction to Revit Architecture (10 sessions)</h2>
             <p style = "font-weight: bold;">This course is being updated every week, with new sections being added regularly.</p>
+        <section class="learn-section">
+            <h3 style="color: #FF4300">What you'll learn</h3>
+            <ul>
+                <li>Understand basic toolbars, advanced BIM concepts, and the Revit Architecture environment.</li>
+                <li>Create schedules and drawings in Revit Architecture.</li>
+                <li>Design conceptual building models.</li>
+                <li>Perform complete modeling and detailing tasks in Revit Architecture.</li>
+                <li>Work on advanced-level projects using Revit Architecture.</li>
+            </ul>
+        </section>
         <h3>Course Description</h3>
-            <p>This is a comprehensive and continuously updated course, with new content added weekly, 
-            designed for architects and anyone looking to begin with the BIM process. Featuring detailed 
-            instructions, numerous real-world project examples, and professional execution standards, 
-            this course will significantly enhance your learning experience.
+            <p>
+            <strong>Note:</strong> This is a complete course covering <strong>all essential topics with step-by-step instructions</strong>. 
+            It is designed for <strong>architects</strong> and anyone aiming to <strong>start the BIM process</strong>, offering numerous 
+            <strong>real-world project examples</strong> and industry <strong>standards</strong> to enhance your learning experience.
             </p>
-            <p>        
-                <ul>
-                    <li>Want to learn a 3D modeling software to create renderings and deliver detailed execution plans to clients?</li>
-                    <li>Did you know Revit offers powerful capabilities, and once mastered, there’s almost nothing you can’t model in 3D?</li>
-                    <li>Have you learned Revit before but struggled to complete an entire project?</li>
-                    <li>To truly become a professional BIM modeler, mastering Revit is just the beginning; there are several other essential BIM-related topics you need to know.</li>
-                </ul>
-            </p>
-            <p>Drawing from years of experience on projects of all sizes worldwide, 
-            I have structured this course to provide the most comprehensive instruction. 
-            My commitment is that upon completion, you will have mastered every crucial 
-            aspect of the Revit software. This knowledge is designed to fully equip you to 
-            confidently enter the job market as a skilled 3D modeler or a professional BIM specialist.
+
+            <ul>
+            <li>Do you want to learn a 3D modeling software that allows rendering and producing detailed execution plans for clients?</li>
+            <li>Did you know that Revit has extensive capabilities, and once mastered, there’s almost nothing you can’t model in 3D?</li>
+            <li>Have you learned Revit Architecture before but found it challenging to complete a full project?</li>
+            <li>Did you know that beyond Revit, there are other BIM-related topics you should learn to become a professional BIM modeler?</li>
+            </ul>
+
+            <p>
+            This course covers all of these areas. <strong>By the end of the course</strong>, there will be no aspect of Revit left unexplored. 
+            Based on years of experience with projects of various sizes worldwide, the content is organized to provide a 
+            <strong>comprehensive learning path</strong>. 
+            You will gain the skills needed to enter the job market as a <strong>professional 3D modeler</strong> or 
+            <strong>BIM specialist</strong>.
             </p>
 
         <h3>Course Topics Include:</h3>
             <ol>
-                <li>Introduction to Revit Architecture</li>
-                <li>Fundamental concepts in Revit and BIM</li>
-                <li>Familiarization with the user interface of Revit Architecture</li>
-                <li>BIM-based modeling in Revit Architecture</li>
-                <li>Creating various views</li>
-                <li>3D modeling tools in Revit Architecture</li>
-                <li>Preparing construction drawings in Revit</li>
-                <li>3D modeling with the highest level of detail</li>
-                <li>Creating families as needed for various projects and companies</li>
-                <li>Advanced techniques in Revit Architecture</li>
-                <li>Practical exercises and real-world examples</li>
-                <li>Practical tips and troubleshooting guide</li>
+                <li>Introduction to <strong>Revit Architecture</strong></li>
+                <li><strong>Core Concepts</strong> in Revit and BIM</li>
+                <li>Getting familiar with the <strong>User Interface</strong> of Revit Architecture</li>
+                <li><strong>BIM-based Modeling</strong> techniques in Revit Architecture</li>
+                <li>Creating different <strong>views</strong> for projects</li>
+                <li>Using <strong>3D Modeling Tools</strong> in Revit Architecture</li>
+                <li>Producing <strong>construction drawings</strong> in Revit</li>
+                <li>3D Modeling with the <strong>highest level of detail</strong></li>
+                <li><strong>Creating families</strong> for diverse projects and organizational needs</li>
+                <li><strong>Advanced Techniques</strong> for enhanced Revit Architecture workflows</li>
+                <li><strong>Hands-on Exercises</strong> and <strong>Real-world Examples</strong> for practical learning</li>
+                <li>Practical Tips and a <strong>Troubleshooting Guide</strong> for common issues</li>
             </ol>
             <p>In this course, you’ll have access to Revit files from a variety of real 
             projects to practice with, along with quizzes in each section to test your progress.
@@ -57,26 +68,50 @@ const courseDetails = {
     `
     ,
     'sketchup-course': `
-        <h2>Introduction to Revit Architecture</h2>
+        <h2>Introduction to SketchUp Architecture (06 sessions)</h2>
             <p style = "font-weight: bold;">This course is being updated every week, with new sections being added regularly.</p>
-        <h3>Course Description</h3>    
-            <p>Learn SketchUp by developing good modeling habits and becoming proficient in real-world workflows.</p>
-            <p>This course is designed for SketchUp users aiming to work at a professional level. 
-            It is suitable for both motivated beginners and experienced users, and covers how to 
-            produce well-organized, practical 3D models and refined presentations with SketchUp Pro.</p>
+            <section class="learn-section">
+                <h3 style="color: #FF4300">What you'll learn</h3>
 
-            <p>The course begins with creating a custom template and configuring toolbars for efficiency, 
-            followed by a detailed introduction to SketchUp’s primary modeling tools.</p>
-            <p>During the course, you will create a simple living room model from the ground up—building walls, adding doors and windows, and organizing the design with groups and components. You will also learn how to position and adjust furniture, apply materials and textures, and add custom artwork to enhance the space.</p>
-            <p>As you move forward, you will include architectural elements such as trim and baseboards, use tags to control visibility, and set up scenes to save views for renderings, plans, and elevations.</p>
-            <p>In the final stage, you will transfer your model to LayOut, SketchUp’s presentation tool, to produce a complete document with title blocks, dimensions, labels, and design notes.
+                    <ul>
+                        <li>Master SketchUp drawing tools such as Line, Arc, Circle, and Rectangle for precise architectural modeling.</li>
+                        <li>Use transformation tools like Move, Rotate, Scale, and Group to streamline the 3D design workflow.</li>
+                        <li>Enhance presentations with visualization features including Camera control, Styles, Shadows, and Sections.</li>
+                        <li>Work with advanced tools and plugins such as Dynamic Components, Sandbox, customization options, and material management.</li>
+                        <li>Complete architectural design projects like urban benches, villas, cottages, and lobbies for hands-on practice.</li>
+                        <li>Import AutoCAD drawings into SketchUp and convert them into accurate 3D models for architectural and design purposes.</li>
+                        <li>Create high-quality renders and section animations for architectural visualization.</li>
+                        <li>Apply volumetric modeling techniques including Push/Pull, Follow Me, and Solid Tools for realistic 3D forms.</li>
+                        <li>Optimize modeling with component and measurement tools for precise dimensions and efficiency.</li>
+                        <li>Bring designs to life using animation tools in SketchUp.</li>
+                        <li>Model complex forms using advanced 3D techniques like Curviloft, Bezier, Joint Push Pull, SubD, and Artisan.</li>
+                        <li>Tackle advanced projects such as muqarnas, interchanges, and classical facade designs.</li>
+                    </ul>
+
+            </section>
+            <h3>Course Description</h3>   
+           <p>
+            Learn SketchUp by building strong <strong>modeling habits</strong> and becoming skilled in <strong>real-world workflows</strong>.
             </p>
-            <p>By the conclusion of the course, you will be able to model interior spaces efficiently, manage projects in an organized way, and prepare documentation suitable for clients, presentations, or project teams.</p>
-            <p>Drawing from years of experience on projects of all sizes worldwide, 
-            I have structured this course to provide the most comprehensive instruction. 
-            My commitment is that upon completion, you will have mastered every crucial 
-            aspect of the Revit software. This knowledge is designed to fully equip you to 
-            confidently enter the job market as a skilled 3D modeler.
+
+            <p>
+            Bring your ideas to life with SketchUp. This course is designed to guide architects, builders, and designers into 
+            <strong>3D modeling</strong> with a solid foundation.
+            </p>
+
+            <p>
+            This course covers the essential concepts needed to work confidently in SketchUp without unnecessary difficulties. 
+            It is suitable for <strong>beginners</strong> and <strong>intermediate users</strong> who want to develop and expand their skills.
+            </p>
+
+            <p>
+            Throughout the course, you will create a simple <strong>residential model</strong> from scratch—building walls, adding doors and windows, 
+            and organizing the design using groups and components. You will also learn how to place and adjust furniture, apply materials and textures, 
+            and include custom artwork to enhance the design.
+            </p>
+
+            <p>
+            I will guide you step-by-step from start to finish. Feel free to contact me with any questions—I look forward to hearing from you.
             </p>
 
         <h3>Course Topics Include:</h3>
@@ -115,54 +150,39 @@ const courseDetails = {
     `
     ,
     'autocad-course': `
-        <h2>Introduction to AutoCAD Architecture</h2>
+        <h2>Introduction to AutoCAD Architecture (06 sessions)</h2>
             <p style = "font-weight: bold;">This course covers everything you need to learn AutoCAD from the scratch</p>
-            <h3>Major Highlights of the Course</h3>
-                <ul>
-                    <li>Comprehensive AutoCAD course with only 8 lesson</li>
-                    <li>All lesson files available for download</li>
-                    <li>Self-assessment practice drawings after each section</li>
-                    <li>eBook with 150 AutoCAD commands and quizzes included</li>
-                    <li>Taught by a certified AutoCAD professional</li>
-                    <li>Additional practice drawings and projects at the end of the course</li>
-                </ul>
+            <section class="learn-section">
+                <h3 style="color: #FF4300">What you'll learn</h3>
 
-            <h3>What This Course Is About</h3>
-                <p>
-                    This is a full-length AutoCAD learning package for versions 2018, 2019, 2020, and 2021.
-                    It covers nearly all topics required to work effectively with the software and is suitable
-                    for both beginners and experienced users.
-                </p>
-                <p>
-                    A beginner can start from the first lesson and learn from scratch. Experienced users can
-                    choose the topics they need without reviewing the basics.
-                </p>
+                    <ul>
+                        <li>Use AutoCAD commands to create and edit drawings, plans, and layouts.</li>
+                        <li>Work on various architecture projects.</li>
+                        <li>Apply AutoCAD Architecture tools and commands to produce 3D designs.</li>
+                        <li>Use AutoCAD commands to dimension drawings, apply constraints, insert symbols, and create text, blocks, and dynamic blocks.</li>
+                        <li>Convert drawings from 2D to 3D.</li>
+                        <li>Understand the main features of AutoCAD Architecture.</li>
+                    </ul>
 
-            <h3>Project-Oriented Course</h3>
+            </section>
+
+            <h3>Course Description</h3>
                 <p>
-                    Lessons are built around projects, and tools and commands are taught with real-world applications.
-                    Each module ends with a practical question related to the material, encouraging students to review
-                    their understanding before moving on.
+                This course introduces <strong>AutoCAD Architecture</strong> to beginners and updates the knowledge of those already familiar with earlier versions. 
+                Lessons provide detailed explanations of the <strong>commands</strong> and their applications, supported by real-world examples.
                 </p>
 
-            <h3>Drawings for Practice</h3>
                 <p>
-                    In addition to module-end questions, the course includes a dedicated section for
-                    practice drawings and projects such as floor plans, circuit diagrams, and others.
+                Participants will learn to use <strong>AutoCAD Commands</strong> for creating drawings, adding dimensions, applying constraints, inserting text and blocks, 
+                creating projects, applying <strong>CAD Standards</strong>, and producing <strong>3D objects</strong>. 
+                The course begins with fundamental drafting and design concepts, such as <strong>dimensioning principles</strong>, 
+                and progresses to projects that build essential skills for solving design challenges in <strong>AutoCAD Architecture</strong>. 
+                Students will also learn to transform existing <strong>2D drawings</strong> into complete <strong>3D projects</strong>.
                 </p>
 
-            <h3>Instructor Support for Questions</h3>
                 <p>
-                    Students are encouraged to ask course-related questions in the Q&A section.
-                    The instructor responds to all questions promptly and has answered every
-                    course-related query from students so far.
+                Additionally, the course covers advanced tools introduced in the recent versions of <strong>AutoCAD</strong>.
                 </p>
-                <p>
-                    If you are unsure about enrolling, you can watch preview videos before joining.
-                    Even after enrolling, if the course does not meet your expectations, you may
-                    request a refund within 30 days of purchase.
-                </p>
-
             <h3>Pre-requisites</h3>
                 <p>
                     Access to AutoCAD software (student, trial, or commercial version) is required.
@@ -196,24 +216,35 @@ const courseDetails = {
     `
     ,
     'photoshop-course': `
-        <h2>Introduction to Adobe-Photoshop</h2>
+        <h2>Introduction to Adobe-Photoshop  (04 sessions)</h2>
             <p style = "font-weight: bold;">This course is being updated every week, with new sections being added regularly.</p>
+        <section class="learn-section">
+            <h3 style="color: #FF4300">What you'll learn</h3>
+            <ul>
+                <li>Produce high-quality site plans</li>
+                <li>Design visualisations that can win competitions</li>
+                <li>Develop impressive sections</li>
+                <li>Create appealing architectural diagrams</li>
+            </ul>
+        </section>
         <h3>Course Description</h3>
-            <p>Learn how to edit contemporary sections, elevations, site plans, diagrams, and visualizations in Photoshop.
+            <p>
+            Learn how to edit <strong>modern sections, elevations, site plans, diagrams, and visualizations</strong> using Photoshop.
             </p>
-            <p>        
-                Each module focuses on a separate topic and includes ready-to-use resources so you can 
-                reproduce everything shown in the tutorials. You’ll also receive the original Photoshop files, 
-                allowing you to copy settings, layers, and other elements into your own projects. Lessons are 
-                split into short videos that guide you step by step through the process.
+
+            <p>
+            Each module covers a specific topic and provides <strong>ready-to-use resources</strong> so you can replicate every step shown in the tutorials. 
+            You will also receive the original Photoshop files, enabling you to copy settings, layers, and other elements into your own projects.
             </p>
-            <p>It doesn’t matter which version of Adobe Photoshop you use; however, 
-            this course is not designed for complete beginners. Beginners are still welcome, 
-            as all steps and shortcuts are explained throughout, but it’s recommended that you have at 
-            least some basic knowledge of Photoshop.
+
+            <p>
+            The course works with any version of Adobe Photoshop. While not aimed at complete beginners, 
+            <strong>beginners</strong> are welcome—every step and shortcut is clearly explained. 
+            However, having a basic understanding of Photoshop is recommended.
             </p>
-            <p>Updates are planned in the near future. Suggestions for upcoming 
-            updates and add-ons are encouraged, and your ideas and feedback are always welcome.
+
+            <p>
+            Updates are planned <strong>in the near future</strong>. <strong>Your ideas and feedback are always welcome</strong>.
             </p>
 
         <h3>Course Topics Include:</h3>
@@ -246,35 +277,55 @@ const courseDetails = {
     `
     ,
     'indesign-course': `
-        <h2>Introduction to Adobe-Indesign</h2>
+        <h2>Introduction to Adobe-Indesign  (04 sessions)</h2>
             <p style = "font-weight: bold;">This course is being updated every week, with new sections being added regularly.</p>
+        <section class="learn-section">
+            <h3 style="color: #FF4300">What you'll learn</h3>
+
+                <ul>
+                    <li>Develop a professional architectural portfolio: 
+                    Learn how to design an organized and visually engaging portfolio using Adobe InDesign.</li>
+                    <li>Maintain a consistent and appealing layout: 
+                    Discover techniques for creating a cohesive design style across all portfolio pages.</li>
+                    <li>Use InDesign effectively: 
+                    Build proficiency in a range of InDesign tools, features, and techniques for portfolio creation.</li>
+                    <li>Incorporate design principles: 
+                    Learn how to apply core design concepts to enhance the quality and impact of architectural portfolios.</li>
+                </ul>
+
+        </section>
         <h3>Course Description</h3>
             <p>
-                This course is for individuals who want to present their architectural projects professionally and attractively.
-                Whether you are a student, freelancer, or employee, it will guide you in creating a portfolio that reflects your skills and style.
-                You will learn how to:
+            This course is designed for anyone who wants to <strong>present their architectural projects professionally and attractively</strong>. 
+            Whether you are a <strong>student</strong>, <strong>freelancer</strong>, or <strong>employee</strong>, you will learn to create a portfolio that truly reflects your skills and style. 
+            You will discover how to:
             </p>
+
             <ul>
-                <li>Design a portfolio layout suited to your style and purpose.</li>
-                <li>Use InDesign’s tools and features to create and edit text, images, graphics, and tables.</li>
-                <li>Organize portfolio content into sections and pages.</li>
-                <li>Export and print your portfolio as a PDF or book.</li>
+            <li>Design a <strong>portfolio layout</strong> tailored to your style and purpose.</li>
+            <li>Use InDesign’s tools to create and edit text, images, graphics, and tables.</li>
+            <li>Organize portfolio content into clear sections and pages.</li>
+            <li>Export and print your portfolio as a PDF or physical book.</li>
             </ul>
+
             <p>
-                By the end of the course, you will have a 12-page portfolio showcasing two of your projects in detail.
-                You will also gain the confidence and knowledge to design your own portfolio independently.
+            By the end of the course, you will have a <strong>12-page portfolio</strong> featuring two detailed projects. 
+            You’ll also gain the confidence and skills to create your own portfolio independently.
             </p>
+
             <p>
-                In addition to creating a portfolio, the course aims to build InDesign skills for a variety of architectural applications.
-                Additional topics to be added over time include:
+            Beyond portfolio creation, the course develops <strong>InDesign skills</strong> for various <strong>architectural applications</strong>, 
+            including:
             </p>
+
             <ul>
-                <li>Creating presentation files, magazines, and books for projects.</li>
-                <li>Developing interactive presentations and animations for clients.</li>
-                <li>Collaborating with other designers and architects using InDesign.</li>
+            <li>Creating presentation files, magazines, and project books.</li>
+            <li>Developing interactive presentations and animations for clients.</li>
+            <li>Collaborating with designers and architects using InDesign.</li>
             </ul>
+
             <p>
-                The course will continue to be updated with more content to serve as a complete InDesign resource for architects.
+            The course will be continually updated to remain a complete InDesign resource for architects.
             </p>
         <h3>Course Topics Include:</h3>
             <ol>
@@ -936,7 +987,7 @@ const pageTemplates = {
             <section style="padding-bottom: 40px">
                 <div class="portfolio-block-contact-tab" id="contact-portfolio" style="border-bottom:0;">
                     <div class="portfolio-main text-content" style="text-align: left; color: #000000ff; padding-left: 0px;">
-                        <p style = "padding-top: 0px; color: #000000ff; line-height: 1.6;">
+                        <p style = "padding-top: 0px; margin-top: 0px; color: #000000ff; line-height: 1.6;">
                             I am a lecturer and researcher working in an academic environment, but also someone with a strong passion for design and hands-on DIY projects. 
                             If you're interested in the work I've done (in 
                             <a href="#personal-interests" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; font-weight: bold;">Personal Interests</a>
@@ -944,10 +995,10 @@ const pageTemplates = {
                             <a href="#portfolio" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; font-weight: bold;">Portfolio</a>
                             ) — feel free to leave your contact information on the right.
                         </p>
-                        <p style = "padding-top: 20px; color: #000000ff; line-height: 1.6;">
-                            In addition, I offer private tutoring in software subjects related to architectural skills. 
+                        <p style = "padding-top: 0px; color: #000000ff; line-height: 1.6;">
+                            In addition, I offer <strong>customized classes</strong> in software subjects related to <strong>architectural skills</strong>. 
                             If you are interested, please get in touch. 
-                            The syllabus for these courses can be found in list below:
+                            <strong>The syllabus</strong> for these courses can be found in list below:
                             <ul>
                                 <li><a href="#" class="course-popup-trigger" data-course-id="autocad-course">
                                         <strong>AUTOCAD</strong>

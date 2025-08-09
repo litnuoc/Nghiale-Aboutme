@@ -1061,6 +1061,61 @@
                 color: #FF4300; /* Màu cam đậm hơn khi rê chuột */
                 text-decoration: underline; /* Thêm lại gạch chân khi rê chuột để rõ ràng hơn */
             }
+            /* --- CSS CHO KHU VỰC "WHAT YOU'LL LEARN" --- */
+
+            /* 1. Định dạng cho toàn bộ khu vực */
+            .learn-section {
+                background-color: #fff; /* Nền trắng (hoặc màu bạn muốn) */
+                color: #333; /* Màu chữ tối */
+                padding: 10px 20px 30px 20px; /* Khoảng đệm trên dưới và trái phải */
+                border-radius: 8px;
+                border: 2px solid #FF4300;
+                max-width: 800px; /* Giới hạn chiều rộng để dễ đọc */
+                margin: 0px auto; /* Tự động căn giữa */
+                font-family: 'PT Serif', serif; /* Chọn font chữ phù hợp */
+            }
+
+            /* 2. Định dạng cho tiêu đề "What you'll learn" */
+            .learn-section h2 {
+                font-size: 28px;
+                font-weight: bold;
+                color: #1c1d1f; /* Màu chữ tiêu đề đậm hơn một chút */
+                margin-top: 0;
+                margin-bottom: 30px;
+            }
+
+            /* 3. Layout 2 cột cho danh sách */
+            .learn-section ul {
+                list-style: none; /* Bỏ các dấu chấm tròn mặc định */
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: 1fr 1fr; /* Chia thành 2 cột bằng nhau */
+                gap: 15px 20px; /* Khoảng cách giữa các hàng và các cột */
+            }
+
+            /* 4. Định dạng cho từng mục trong danh sách */
+            .learn-section li {
+                display: flex; /* Dùng flexbox để căn chỉnh dấu tick và chữ */
+                align-items: flex-start; /* Căn lề trên cùng */
+                font-size: 16px;
+            }
+
+            /* 5. Tạo và định dạng dấu tick (✓) bằng pseudo-element */
+            .learn-section li::before {
+                content: '✓'; /* Ký tự dấu tick */
+                color: #FF4300; /* Màu tím cho dấu tick (bạn có thể đổi màu) */
+                font-weight: bold;
+                font-size: 20px;
+                margin-right: 12px; /* Khoảng cách giữa dấu tick và chữ */
+                line-height: 1; /* Đảm bảo dấu tick không quá cao */
+            }
+            /* --- Responsive cho điện thoại --- */
+            @media (max-width: 768px) {
+                .learn-section ul {
+                    grid-template-columns: 1fr; /* Chuyển về 1 cột trên màn hình nhỏ */
+                }
+            }
 
     </style>
 </head>
